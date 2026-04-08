@@ -1,0 +1,224 @@
+backend:
+  name: github
+  repo: jl69lucas-netizen/maltipoosforsale-com
+  branch: main
+  base_url: https://NETLIFY_OAUTH_GATEWAY_PLACEHOLDER
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "puppies"
+    label: "Available Puppies"
+    label_singular: "Puppy"
+    folder: "_data/puppies"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Puppy Name", name: "name", widget: "string" }
+      - { label: "Breed", name: "breed", widget: "string", default: "Maltipoo" }
+      - { label: "Price", name: "price", widget: "string" }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["Available", "Reserved", "Sold"]
+        default: "Available"
+      - label: "Gender"
+        name: "gender"
+        widget: "select"
+        options: ["Male", "Female"]
+      - { label: "Date of Birth", name: "dob", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Color", name: "color", widget: "string" }
+      - { label: "Weight (lbs)", name: "weight", widget: "string" }
+      - { label: "Main Photo", name: "photo", widget: "image", required: false }
+      - label: "Additional Photos"
+        name: "photos"
+        widget: "list"
+        required: false
+        field: { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Health Info", name: "health_info", widget: "text", required: false }
+      - { label: "Vaccinations", name: "vaccinations", widget: "string", required: false }
+      - { label: "Microchipped", name: "microchipped", widget: "boolean", default: true }
+      - { label: "AKC Registered", name: "akc_registered", widget: "boolean", default: false }
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+
+  - name: "parent_dogs"
+    label: "Parent Dogs"
+    label_singular: "Parent Dog"
+    folder: "_data/parents"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - label: "Role"
+        name: "role"
+        widget: "select"
+        options: ["Mom", "Dad"]
+      - { label: "Breed", name: "breed", widget: "string" }
+      - { label: "Color", name: "color", widget: "string" }
+      - { label: "Weight (lbs)", name: "weight", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "Health Clearances", name: "health_clearances", widget: "text", required: false }
+
+  - name: "locations"
+    label: "USA Location Pages"
+    label_singular: "Location Page"
+    folder: "_data/locations"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "State Name", name: "state", widget: "string" }
+      - { label: "State Abbreviation", name: "state_abbr", widget: "string" }
+      - { label: "City", name: "city", widget: "string", required: false }
+      - { label: "Page Heading", name: "heading", widget: "string" }
+      - { label: "Local Content", name: "content", widget: "markdown" }
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Focus Keyword", name: "focus_keyword", widget: "string", required: false }
+          - { label: "OG Title", name: "og_title", widget: "string", required: false }
+          - { label: "OG Description", name: "og_description", widget: "text", required: false }
+          - { label: "Canonical URL", name: "canonical", widget: "string", required: false }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    label_singular: "Testimonial"
+    folder: "_data/testimonials"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Customer Name", name: "name", widget: "string" }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Puppy Name", name: "puppy_name", widget: "string", required: false }
+      - label: "Star Rating"
+        name: "rating"
+        widget: "select"
+        options: ["5", "4", "3"]
+        default: "5"
+      - { label: "Review", name: "review", widget: "text" }
+      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD", required: false }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+
+  - name: "faq"
+    label: "FAQ"
+    label_singular: "FAQ Item"
+    folder: "_data/faq"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Question", name: "question", widget: "string" }
+      - { label: "Answer", name: "answer", widget: "text" }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
+
+  - name: "shipping"
+    label: "Shipping & Delivery"
+    files:
+      - name: "shipping_info"
+        label: "Shipping Information"
+        file: "_data/shipping.json"
+        fields:
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - label: "Shipping Methods"
+            name: "methods"
+            widget: "list"
+            fields:
+              - { label: "Method Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Cost", name: "cost", widget: "string" }
+              - { label: "Timeframe", name: "timeframe", widget: "string" }
+          - { label: "Additional Notes", name: "notes", widget: "text", required: false }
+
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Blog Post"
+    folder: "_data/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Breed Info", "Care Tips", "Training", "Health", "News", "Testimonials"]
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Content", name: "body", widget: "markdown" }
+      - label: "Social Captions"
+        name: "social"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - { label: "Facebook Caption", name: "facebook", widget: "text", required: false }
+          - { label: "Instagram Caption", name: "instagram", widget: "text", required: false }
+          - { label: "Twitter/X Caption", name: "twitter", widget: "text", required: false }
+          - { label: "Pinterest Caption", name: "pinterest", widget: "text", required: false }
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Focus Keyword", name: "focus_keyword", widget: "string", required: false }
+
+  - name: "site_settings"
+    label: "Site Settings & SEO"
+    files:
+      - name: "global_seo"
+        label: "Global SEO Defaults"
+        file: "_data/settings.json"
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Site URL", name: "site_url", widget: "string" }
+          - { label: "Default Meta Title", name: "default_title", widget: "string" }
+          - { label: "Default Meta Description", name: "default_description", widget: "text" }
+          - { label: "OG Image", name: "og_image", widget: "image", required: false }
+          - { label: "Twitter Handle", name: "twitter_handle", widget: "string", required: false }
+          - { label: "Google Analytics ID", name: "ga_id", widget: "string", required: false }
+          - label: "Organization Schema"
+            name: "schema_org"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Business Name", name: "name", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Logo URL", name: "logo", widget: "string", required: false }
+      - name: "homepage_seo"
+        label: "Homepage SEO"
+        file: "_data/pages/homepage.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Focus Keyword", name: "focus_keyword", widget: "string", required: false }
+          - { label: "OG Title", name: "og_title", widget: "string", required: false }
+          - { label: "OG Description", name: "og_description", widget: "text", required: false }
+          - { label: "OG Image", name: "og_image", widget: "image", required: false }
+          - { label: "Canonical URL", name: "canonical", widget: "string", required: false }
+          - { label: "H1 Heading", name: "h1", widget: "string", required: false }
+          - { label: "Hero Subheading", name: "subheading", widget: "text", required: false }
