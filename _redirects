@@ -1,3 +1,6 @@
+# www → non-www redirect (requires www to be added as domain alias in Netlify)
+https://www.maltipoosforsale.com/* https://maltipoosforsale.com/:splat 301!
+
 # Old WordPress URL redirects — 301 permanent
 /wp-admin/*     /admin/     301
 /wp-login.php   /admin/     301

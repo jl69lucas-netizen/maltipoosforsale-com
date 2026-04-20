@@ -1,0 +1,302 @@
+<!--
+  ══════════════════════════════════════════════════════
+  EMBED FORM — VERSION 1: "Compact Card"
+  Clean single-column card with orange accent border.
+  Paste anywhere inside a page's <body>.
+  ══════════════════════════════════════════════════════
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rosario:wght@600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+.mfs1*{box-sizing:border-box;margin:0;padding:0}
+.mfs1{
+  font-family:'Open Sans',sans-serif;
+  max-width:680px;
+  margin:0 auto;
+  background:#fff;
+  border-radius:16px;
+  border-left:5px solid #FF6210;
+  box-shadow:0 4px 24px rgba(255,98,16,0.13);
+  padding:32px 36px;
+}
+.mfs1 .mfs1-head{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:22px;
+}
+.mfs1 .mfs1-head .mfs1-icon{
+  width:44px;height:44px;flex-shrink:0;
+  background:linear-gradient(135deg,#FF6210,#FF8C42);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.2rem;
+}
+.mfs1 .mfs1-head h2{
+  font-family:'Rosario',sans-serif;font-size:1.25rem;font-weight:700;color:#222;
+}
+.mfs1 .mfs1-head p{font-size:0.82rem;color:#888;margin-top:2px;}
+.mfs1 .mfs1-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.mfs1 .mfs1-field{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;}
+.mfs1 .mfs1-field:last-child{margin-bottom:0;}
+.mfs1 label{font-size:0.78rem;font-weight:600;color:#555;text-transform:uppercase;letter-spacing:0.04em;}
+.mfs1 label .r{color:#FF6210;}
+.mfs1 input,.mfs1 select,.mfs1 textarea{
+  width:100%;border:1.5px solid #E0E0E0;border-radius:8px;
+  padding:10px 14px;font-family:'Open Sans',sans-serif;font-size:0.88rem;
+  background:#FAFAFA;color:#333;outline:none;
+  transition:border-color .2s,box-shadow .2s;appearance:none;
+}
+.mfs1 select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23FF6210' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;cursor:pointer;
+}
+.mfs1 textarea{border-radius:8px;resize:vertical;min-height:80px;}
+.mfs1 input:focus,.mfs1 select:focus,.mfs1 textarea:focus{
+  border-color:#FF6210;box-shadow:0 0 0 3px rgba(255,98,16,0.12);background:#fff;
+}
+.mfs1 .mfs1-divider{
+  font-family:'Rosario',sans-serif;font-size:0.78rem;font-weight:700;
+  color:#FF6210;text-transform:uppercase;letter-spacing:0.08em;
+  border-top:1px solid #F0E8E3;margin:18px 0 14px;padding-top:14px;
+}
+.mfs1 .mfs1-radios{display:flex;flex-direction:column;gap:7px;}
+.mfs1 .mfs1-radio{
+  display:flex;align-items:flex-start;gap:9px;
+  border:1.5px solid #E0E0E0;border-radius:8px;padding:9px 12px;cursor:pointer;
+  transition:border-color .2s,background .2s;
+}
+.mfs1 .mfs1-radio:has(input:checked){border-color:#FF6210;background:#FFF8F3;}
+.mfs1 .mfs1-radio input{width:15px;height:15px;accent-color:#FF6210;flex-shrink:0;margin-top:3px;cursor:pointer;}
+.mfs1 .mfs1-radio .mfs1-rl{font-size:0.85rem;font-weight:600;color:#333;line-height:1.3;}
+.mfs1 .mfs1-radio .mfs1-rs{display:block;font-size:0.75rem;color:#888;font-weight:400;margin-top:1px;}
+.mfs1 .mfs1-check{
+  display:flex;align-items:center;gap:9px;
+  border:1.5px solid #E0E0E0;border-radius:8px;padding:9px 12px;cursor:pointer;
+}
+.mfs1 .mfs1-check:has(input:checked){border-color:#FF6210;background:#FFF8F3;}
+.mfs1 .mfs1-check input{width:15px;height:15px;accent-color:#FF6210;cursor:pointer;}
+.mfs1 .mfs1-check span{font-size:0.85rem;color:#333;font-weight:500;}
+.mfs1 .mfs1-btn{
+  width:100%;margin-top:22px;
+  background:linear-gradient(135deg,#FF6210 0%,#FF8C42 100%);
+  color:#fff;border:none;border-radius:8px;
+  padding:14px;font-family:'Open Sans',sans-serif;font-size:0.95rem;font-weight:700;
+  cursor:pointer;letter-spacing:0.02em;
+  box-shadow:0 4px 14px rgba(255,98,16,0.28);
+  transition:transform .2s,box-shadow .2s;
+}
+.mfs1 .mfs1-btn:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(255,98,16,0.38);}
+.mfs1 .mfs1-note{text-align:center;font-size:0.72rem;color:#aaa;margin-top:8px;}
+.mfs1 .mfs1-ty{
+  display:none;text-align:center;padding:32px 0;
+}
+.mfs1 .mfs1-ty .mfs1-tick{
+  width:56px;height:56px;background:linear-gradient(135deg,#FF6210,#FF8C42);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 14px;font-size:1.6rem;color:#fff;
+}
+.mfs1 .mfs1-ty h3{font-family:'Rosario',sans-serif;font-size:1.3rem;color:#FF6210;margin-bottom:8px;}
+.mfs1 .mfs1-ty p{font-size:0.88rem;color:#666;}
+.mfs1 .hp{display:none!important;}
+@media(max-width:560px){
+  .mfs1{padding:22px 18px;border-radius:12px;}
+  .mfs1 .mfs1-grid{grid-template-columns:1fr;}
+}
+</style>
+
+<div class="mfs1" id="mfs1-wrap">
+
+  <!-- Thank you -->
+  <div class="mfs1-ty" id="mfs1-ty">
+    <div class="mfs1-tick">&#10003;</div>
+    <h3>Application Received!</h3>
+    <p>We'll be in touch within 24 hours.<br>
+    <a href="/available/" style="color:#FF6210;font-weight:600;">Browse available puppies &rarr;</a></p>
+  </div>
+
+  <!-- Form -->
+  <form id="mfs1-form" action="https://formspree.io/f/xpqoeazq" method="POST">
+    <input type="hidden" name="_subject" value="New Puppy Inquiry — MaltipooForSale.com" />
+    <input type="hidden" name="_next" value="?submitted=true" />
+    <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+
+    <div class="mfs1-head">
+      <div class="mfs1-icon">&#128054;</div>
+      <div>
+        <h2>Puppy Interest Form</h2>
+        <p>Complete below &mdash; we respond within 24 hours</p>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="mfs1-grid">
+      <div class="mfs1-field">
+        <label>First Name <span class="r">*</span></label>
+        <input type="text" name="First Name" placeholder="Jane" required />
+      </div>
+      <div class="mfs1-field">
+        <label>Last Name <span class="r">*</span></label>
+        <input type="text" name="Last Name" placeholder="Smith" required />
+      </div>
+      <div class="mfs1-field">
+        <label>Email <span class="r">*</span></label>
+        <input type="email" name="Email" id="mfs1-email" placeholder="jane@email.com" required />
+      </div>
+      <div class="mfs1-field">
+        <label>Confirm Email <span class="r">*</span></label>
+        <input type="email" name="Confirm Email" id="mfs1-emailc" placeholder="jane@email.com" required />
+      </div>
+      <div class="mfs1-field">
+        <label>Phone <span class="r">*</span></label>
+        <input type="tel" name="Phone" id="mfs1-phone" placeholder="(555) 123-4567" required />
+      </div>
+      <div class="mfs1-field">
+        <label>Confirm Phone <span class="r">*</span></label>
+        <input type="tel" name="Confirm Phone" id="mfs1-phonec" placeholder="(555) 123-4567" required />
+      </div>
+    </div>
+
+    <div class="mfs1-field">
+      <label>State / Location <span class="r">*</span></label>
+      <input type="text" name="State/Location" placeholder="e.g. Texas, California…" required />
+    </div>
+
+    <!-- Puppy Prefs -->
+    <div class="mfs1-divider">Puppy Preferences</div>
+
+    <div class="mfs1-grid">
+      <div class="mfs1-field">
+        <label>Interested In <span class="r">*</span></label>
+        <select name="Interested In" required>
+          <option value="" disabled selected>Select…</option>
+          <option>Maltipoo</option>
+          <option>Maltese</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="mfs1-field">
+        <label>Preferred Size <span class="r">*</span></label>
+        <select name="Preferred Size" required>
+          <option value="" disabled selected>Select…</option>
+          <option>Mini / Standard</option>
+          <option>Micro / Tiny</option>
+          <option>Teacup</option>
+          <option>Toy</option>
+        </select>
+      </div>
+      <div class="mfs1-field">
+        <label>Timeline <span class="r">*</span></label>
+        <select name="Timeline" required>
+          <option value="" disabled selected>How soon?</option>
+          <option>Ready NOW</option>
+          <option>1–2 Weeks</option>
+          <option>1–3 Months</option>
+          <option>Just Researching</option>
+        </select>
+      </div>
+      <div class="mfs1-field">
+        <label>Puppy Name <span class="r">*</span></label>
+        <input type="text" name="Puppy Name" placeholder="e.g. Bella" required />
+      </div>
+    </div>
+
+    <div class="mfs1-field">
+      <label>Hours Alone Per Day <span class="r">*</span></label>
+      <input type="text" name="Hours Alone Per Day" placeholder="e.g. 4 hours" required />
+    </div>
+
+    <div class="mfs1-field">
+      <label>Main Reason for Getting a Puppy <span class="r">*</span></label>
+      <textarea name="Main Reason for Getting a Puppy" placeholder="Tell us about your lifestyle…" required></textarea>
+    </div>
+
+    <div class="mfs1-grid">
+      <div class="mfs1-field">
+        <label>Funds Ready? <span class="r">*</span></label>
+        <select name="Funds Available" required>
+          <option value="" disabled selected>Select…</option>
+          <option>Yes, I have funds ready</option>
+          <option>No, not yet</option>
+        </select>
+      </div>
+      <div class="mfs1-field">
+        <label>Prior Maltipoo/Maltese Owner?</label>
+        <label class="mfs1-check" style="margin-top:4px;">
+          <input type="checkbox" name="Prior Maltipoo/Maltese Owner" value="Yes" />
+          <span>Yes, I have owned one before</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Delivery -->
+    <div class="mfs1-divider">Delivery &amp; Payment</div>
+
+    <div class="mfs1-field">
+      <label>Delivery Preference <span class="r">*</span></label>
+      <div class="mfs1-radios">
+        <label class="mfs1-radio">
+          <input type="radio" name="Delivery Preference" value="Airport Flight Nanny Delivery" required />
+          <span><span class="mfs1-rl">Airport Flight Nanny <em style="color:#FF6210;font-style:normal;">(Preferred)</em></span><span class="mfs1-rs">Pick up at your nearest airport — no extra cost</span></span>
+        </label>
+        <label class="mfs1-radio">
+          <input type="radio" name="Delivery Preference" value="Doorstep Delivery (+$375)" />
+          <span><span class="mfs1-rl">Doorstep Delivery <em style="font-style:normal;color:#888;">(+$375)</em></span><span class="mfs1-rs">Ground transport from airport to your home</span></span>
+        </label>
+        <label class="mfs1-radio">
+          <input type="radio" name="Delivery Preference" value="Hold Puppy & Deliver Later" />
+          <span><span class="mfs1-rl">Hold &amp; Deliver Later</span><span class="mfs1-rs">We hold up to 2 months at no extra cost</span></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="mfs1-field">
+      <label>Payment Method <span class="r">*</span></label>
+      <div class="mfs1-radios">
+        <label class="mfs1-radio">
+          <input type="radio" name="Payment Method" value="Zelle" required />
+          <span><span class="mfs1-rl">Zelle <em style="color:#FF6210;font-style:normal;">(Preferred)</em></span><span class="mfs1-rs">Safe, instant, already in your banking app</span></span>
+        </label>
+        <label class="mfs1-radio">
+          <input type="radio" name="Payment Method" value="Bank Transfer (+9% fee)" />
+          <span><span class="mfs1-rl">Bank Transfer <em style="font-style:normal;color:#888;">(+9% fee)</em></span></span>
+        </label>
+        <label class="mfs1-radio">
+          <input type="radio" name="Payment Method" value="PayPal (+13% fee)" />
+          <span><span class="mfs1-rl">PayPal <em style="font-style:normal;color:#888;">(+13% fee)</em></span></span>
+        </label>
+        <label class="mfs1-radio">
+          <input type="radio" name="Payment Method" value="Other" />
+          <span><span class="mfs1-rl">Other</span><span class="mfs1-rs">Tell us in the message box</span></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="mfs1-field">
+      <label>Message / Questions <span style="color:#aaa;text-transform:none;font-weight:400;">(optional)</span></label>
+      <textarea name="Message" placeholder="Any questions or special requests…"></textarea>
+    </div>
+
+    <button class="mfs1-btn" type="submit">Submit My Application &rarr;</button>
+    <p class="mfs1-note">We respond within 24 hours &middot; No spam, ever</p>
+  </form>
+</div>
+
+<script>
+(function(){
+  var wrap=document.getElementById('mfs1-wrap');
+  var form=document.getElementById('mfs1-form');
+  var ty=document.getElementById('mfs1-ty');
+  if(!wrap||!form||!ty)return;
+  if(window.location.search.indexOf('submitted=true')>-1){
+    form.style.display='none';ty.style.display='block';
+  }
+  form.addEventListener('submit',function(e){
+    var em=document.getElementById('mfs1-email').value.trim().toLowerCase();
+    var ec=document.getElementById('mfs1-emailc').value.trim().toLowerCase();
+    var ph=document.getElementById('mfs1-phone').value.replace(/\D/g,'');
+    var pc=document.getElementById('mfs1-phonec').value.replace(/\D/g,'');
+    if(em!==ec){e.preventDefault();alert('Email addresses do not match.');document.getElementById('mfs1-emailc').focus();return;}
+    if(ph!==pc){e.preventDefault();alert('Phone numbers do not match.');document.getElementById('mfs1-phonec').focus();}
+  });
+})();
+</script>
