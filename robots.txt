@@ -1,9 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
 Disallow: /wp-admin/
 Disallow: /wp-content/uploads/wc-logs/
 Disallow: /wp-content/uploads/woocommerce_uploads/
 Disallow: /*?add-to-cart=
+Disallow: /form/
+Disallow: /thank-you/
+Disallow: /tag/
 
 # Allow all major AI crawlers for GEO (Generative Engine Optimization)
 User-agent: GPTBot
