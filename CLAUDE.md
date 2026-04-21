@@ -77,6 +77,7 @@ urllib.request.urlopen(req)
 | Technical Health | `MFS-WEBSITE-HEALTH-SKILL.md` | Broken images, canonicals, redirects |
 | Indexing | `MFS-INDEXING-SKILL.md` | After any deploy, sitemap fixes, GSC submission |
 | Broken Links | `MFS-BROKEN-LINKS-SKILL.md` | GSC 404 errors, broken internal links, missing hub pages |
+| Contact Form | `MFS-CONTACT-FORM-SKILL.md` | Form audit/fix, Formspree ID, newsletter, batch apply to all pages |
 | Location Pages | `LOCATION-PAGE-BUILDER-SKILL.md` | Creating state/city pages |
 | Design Rebuild | `MFS-DESIGN-REBUILD-SKILL.md` | Redesigning pages with new design system |
 | SEO Content | `MFS.md` | All content creation, keyword strategy |
@@ -118,6 +119,8 @@ Then use: `/audit`, `/critique`, `/polish`, `/typeset`, `/layout`
 - ✅ Impeccable (17 skills) + Superpowers (14 skills) installed
 - ✅ 14 broken internal links fixed (redirects + /usa-locations/ hub page)
 - ✅ 12 URLs re-submitted to IndexNow after link fixes
+- ✅ Homepage contact form: 5-field stub → full 17-field Formspree form (xpqoeazq)
+- ✅ Homepage newsletter: broken SureForms → working Formspree email signup
 
 ## What's Next
 1. Run 7 Claude Design prompts in claude.ai (from MFS-DESIGN-REBUILD-SKILL.md)
