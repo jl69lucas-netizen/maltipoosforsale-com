@@ -1,0 +1,123 @@
+# MaltipoosForsale.com — Claude Code Project Guide
+
+## Site Overview
+- **Domain:** https://maltipoosforsale.com
+- **Stack:** Static HTML — exported from WordPress, NO React, NO build tools
+- **Host:** Cloudflare Pages (DNS proxy) → Netlify (static host) → GitHub auto-deploy
+- **Repo:** github.com/jl69lucas-netizen/maltipoosforsale-com
+- **Branch:** main (auto-deploys to Netlify on push)
+- **Two breeds:** Maltipoo ($1,200–$1,700) + AKC Maltese ($1,500–$2,000)
+
+## File Structure
+```
+site2/
+├── index.html              # Homepage
+├── [slug]/index.html       # All pages (99+ total)
+├── usa-locations/*/        # State location pages (22 states)
+├── wp-content/uploads/     # All images (739 files) — DO NOT DELETE
+├── *.xml                   # Sitemaps (9 files — all URLs must be absolute)
+├── _redirects              # Netlify redirect rules
+├── _headers                # Security + CSP headers
+├── robots.txt              # Crawl rules
+├── llms.txt                # AI crawler guide
+├── a1b2c3d4e5f6789012345678maltipoos.txt  # IndexNow key file
+└── .claude/skills/         # Superpowers + Impeccable skills
+```
+
+## Critical Rules — ALWAYS Follow
+
+### 1. Preserve SEO on Every Edit
+- **NEVER change H1 text** without explicit user approval
+- **NEVER change canonical href** — all must be `https://maltipoosforsale.com/slug/`
+- **NEVER remove schema JSON-LD** blocks — preserve verbatim
+- **NEVER make og:url, og:image, canonical relative** — must be absolute
+
+### 2. Images
+- All images live at `/wp-content/uploads/` — reference with root-relative paths
+- **NEVER use `src="data:image/gif;base64,..."`** — that's the broken lazy-load pattern
+- Always use real `src="/wp-content/uploads/filename.jpg"`
+
+### 3. Sitemaps — All URLs Must Be Absolute
+- All `<loc>`, `<image:loc>`, `<video:*>` tags must start with `https://maltipoosforsale.com`
+- After adding new pages, add to `page-sitemap.xml` with absolute URL
+
+### 4. Deploy Flow
+```bash
+git add -A
+git commit -m "Description of change"
+git push origin main   # Triggers Netlify auto-deploy (1-3 min)
+```
+
+### 5. After Any Deploy — Submit to IndexNow
+```python
+import json, urllib.request
+key = "a1b2c3d4e5f6789012345678maltipoos"
+urls = ["https://maltipoosforsale.com/changed-slug/"]
+payload = json.dumps({"host":"maltipoosforsale.com","key":key,
+    "keyLocation":f"https://maltipoosforsale.com/{key}.txt","urlList":urls}).encode()
+req = urllib.request.Request("https://api.indexnow.org/indexnow",data=payload,
+    headers={"Content-Type":"application/json; charset=utf-8"},method="POST")
+urllib.request.urlopen(req)
+```
+
+## Credentials & Keys
+
+| Service | Location |
+|---|---|
+| GitHub token | Already in git remote URL |
+| GSC OAuth | `/Users/apple/mfs-dashboard/.env.local` |
+| Cloudflare token | Ask user — zone ID: `7c1b9a778236d4b00b5c9810c00e1bc5` |
+| IndexNow key | `a1b2c3d4e5f6789012345678maltipoos` |
+| Netlify API | Ask user for token |
+
+## Agent Skills (use these files)
+
+| Agent | Skill File | Trigger |
+|---|---|---|
+| Technical Health | `MFS-WEBSITE-HEALTH-SKILL.md` | Broken images, canonicals, redirects |
+| Indexing | `MFS-INDEXING-SKILL.md` | After any deploy, sitemap fixes, GSC submission |
+| Location Pages | `LOCATION-PAGE-BUILDER-SKILL.md` | Creating state/city pages |
+| Design Rebuild | `MFS-DESIGN-REBUILD-SKILL.md` | Redesigning pages with new design system |
+| SEO Content | `MFS.md` | All content creation, keyword strategy |
+
+All skill files are in `/Users/apple/Downloads/MFS/`
+
+## Impeccable Design Skills
+Installed at `.claude/skills/` — run at start of any design session:
+```
+/impeccable teach
+```
+Then use: `/audit`, `/critique`, `/polish`, `/typeset`, `/layout`
+
+## Design System (defined in MFS-DESIGN-REBUILD-SKILL.md)
+- **Primary:** `#2D6A4F` forest green
+- **Accent/CTA:** `#F4A261` warm orange
+- **Background:** `#FFF8F0` cream
+- **Fonts:** Rosario (headings, 700) + Open Sans (body, 500) — already loaded
+
+## Top Pages by GSC Traffic (redesign priority)
+1. Homepage `/` — 78 clicks, 4,345 impr, pos 57
+2. `/buy-maltipoo-near-me/` — 15 clicks, 1,820 impr, pos 20
+3. `/usa-locations/maltipoo-puppies-arizona/` — 14 clicks
+4. `/toy-maltipoo-puppies/` — 14 clicks
+5. `/mini-maltipoo-puppies/` — 9 clicks, 562 impr
+6. `/teacup-maltipoo-puppies/` — 8 clicks, 230 impr
+
+## Fixed Issues Log (2026-04-21)
+- ✅ 707 broken lazy-load images (GIF placeholders → real src)
+- ✅ 99 relative canonical tags → absolute URLs
+- ✅ 189 relative og:url + og:image + twitter:image → absolute
+- ✅ 115 relative sitemap URLs across 9 XML files
+- ✅ Homepage was blank on GitHub — restored
+- ✅ www redirect via Cloudflare page rule (301)
+- ✅ llms.txt relative URLs + HTML entities decoded
+- ✅ robots.txt missing Disallow rules added
+- ✅ 86 URLs submitted to IndexNow (Bing/Yandex)
+- ✅ 6 sitemaps submitted to Google Search Console
+- ✅ Impeccable (17 skills) + Superpowers (14 skills) installed
+
+## What's Next
+1. Run 7 Claude Design prompts in claude.ai (from MFS-DESIGN-REBUILD-SKILL.md)
+2. Build batch page rebuild agent (applies design to all 99 pages)
+3. Create content agent for new pages
+4. Build SEO audit agent (checks rankings weekly)
