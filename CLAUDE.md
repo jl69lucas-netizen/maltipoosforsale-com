@@ -76,6 +76,7 @@ urllib.request.urlopen(req)
 |---|---|---|
 | Technical Health | `MFS-WEBSITE-HEALTH-SKILL.md` | Broken images, canonicals, redirects |
 | Indexing | `MFS-INDEXING-SKILL.md` | After any deploy, sitemap fixes, GSC submission |
+| Broken Links | `MFS-BROKEN-LINKS-SKILL.md` | GSC 404 errors, broken internal links, missing hub pages |
 | Location Pages | `LOCATION-PAGE-BUILDER-SKILL.md` | Creating state/city pages |
 | Design Rebuild | `MFS-DESIGN-REBUILD-SKILL.md` | Redesigning pages with new design system |
 | SEO Content | `MFS.md` | All content creation, keyword strategy |
@@ -115,6 +116,8 @@ Then use: `/audit`, `/critique`, `/polish`, `/typeset`, `/layout`
 - ✅ 86 URLs submitted to IndexNow (Bing/Yandex)
 - ✅ 6 sitemaps submitted to Google Search Console
 - ✅ Impeccable (17 skills) + Superpowers (14 skills) installed
+- ✅ 14 broken internal links fixed (redirects + /usa-locations/ hub page)
+- ✅ 12 URLs re-submitted to IndexNow after link fixes
 
 ## What's Next
 1. Run 7 Claude Design prompts in claude.ai (from MFS-DESIGN-REBUILD-SKILL.md)
