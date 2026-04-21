@@ -79,6 +79,7 @@ urllib.request.urlopen(req)
 | Broken Links | `MFS-BROKEN-LINKS-SKILL.md` | GSC 404 errors, broken internal links, missing hub pages |
 | Contact Form | `MFS-CONTACT-FORM-SKILL.md` | Form audit/fix, Formspree ID, newsletter, batch apply to all pages |
 | YouTube | `MFS-YOUTUBE-SKILL.md` | Fix broken iframes, video-sitemap.xml errors, add new videos |
+| Google Map | `MFS-GOOGLE-MAP-SKILL.md` | Fix broken embed maps, add maps to location pages |
 | Location Pages | `LOCATION-PAGE-BUILDER-SKILL.md` | Creating state/city pages |
 | Design Rebuild | `MFS-DESIGN-REBUILD-SKILL.md` | Redesigning pages with new design system |
 | SEO Content | `MFS.md` | All content creation, keyword strategy |
