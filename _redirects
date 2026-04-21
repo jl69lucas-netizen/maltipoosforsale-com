@@ -6,3 +6,23 @@ https://www.maltipoosforsale.com/* https://maltipoosforsale.com/:splat 301!
 /wp-login.php   /admin/     301
 /feed           /           301
 /feed/          /           301
+
+# Nested WordPress CPT paths → flat slug redirects
+/maltipoo-puppies-for-sale/teacup-maltipoo-puppies/    /teacup-maltipoo-puppies/    301
+/maltipoo-puppies-for-sale/teacup-maltipoo-puppies     /teacup-maltipoo-puppies/    301
+/maltipoo-puppies-for-sale/toy-maltipoo-puppies/       /toy-maltipoo-puppies/       301
+/maltipoo-puppies-for-sale/toy-maltipoo-puppies        /toy-maltipoo-puppies/       301
+/maltipoo-puppies-for-sale/mini-maltipoo-puppies/      /mini-maltipoo-puppies/      301
+/maltipoo-puppies-for-sale/mini-maltipoo-puppies       /mini-maltipoo-puppies/      301
+/maltipoo-puppies-for-sale/apricot-maltipoo-puppies/   /apricot-maltipoo-puppies/   301
+/maltipoo-puppies-for-sale/apricot-maltipoo-puppies    /apricot-maltipoo-puppies/   301
+/maltese-puppies-for-sale/micro-tiny-maltese/          /micro-tiny-maltese/         301
+/maltese-puppies-for-sale/micro-tiny-maltese           /micro-tiny-maltese/         301
+/maltese-puppies-for-sale/teacup-maltese-puppies/      /teacup-maltese-puppies/     301
+/maltese-puppies-for-sale/teacup-maltese-puppies       /teacup-maltese-puppies/     301
+/maltese-puppies-for-sale/standard-maltese-puppies/    /standard-maltese-puppies/   301
+/maltese-puppies-for-sale/standard-maltese-puppies     /standard-maltese-puppies/   301
+
+# WordPress remnants
+/comments/feed/     /           301
+/comments/feed      /           301
