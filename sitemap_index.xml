@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
-		<loc>/post-sitemap.xml</loc>
+		<loc>https://maltipoosforsale.com/post-sitemap.xml</loc>
 		<lastmod>2025-09-27T21:24:39+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/page-sitemap.xml</loc>
+		<loc>https://maltipoosforsale.com/page-sitemap.xml</loc>
 		<lastmod>2025-12-23T15:26:44+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/product-sitemap.xml</loc>
+		<loc>https://maltipoosforsale.com/product-sitemap.xml</loc>
 		<lastmod>2025-12-16T13:43:57+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/category-sitemap.xml</loc>
+		<loc>https://maltipoosforsale.com/category-sitemap.xml</loc>
 		<lastmod>2025-09-27T21:24:39+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/product_cat-sitemap.xml</loc>
+		<loc>https://maltipoosforsale.com/product_cat-sitemap.xml</loc>
 		<lastmod>2025-12-16T13:43:57+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/video-sitemap.xml</loc>
+		<loc>https://maltipoosforsale.com/video-sitemap.xml</loc>
 		<lastmod>2025-10-07T13:58:09+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/local-sitemap.xml</loc>
+		<loc>https://maltipoosforsale.com/local-sitemap.xml</loc>
 		<lastmod>2025-10-09T20:49:58+00:00</lastmod>
 	</sitemap>
 </sitemapindex>
