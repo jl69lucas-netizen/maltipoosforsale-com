@@ -169,80 +169,57 @@ gtag("config", "GT-W6X7VX9N");
 <link rel="apple-touch-icon" href="/wp-content/uploads/new-mfs-circular-logo-maltipoos-for-sale.png">
 <meta name="msapplication-TileImage" content="/wp-content/uploads/new-mfs-circular-logo-maltipoos-for-sale.png">
 		<style id="wp-custom-css">
-			/* MFS Newsletter Form Styling for SureForms */
-.mfs-newsletter-form .sureforms-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, #FFF8F3 0%, #FFFFFF 100%);
-  border: 2px solid #FF6210;
-  border-radius: 20px;
-  padding: 35px 40px;
-  box-shadow: 0 10px 40px rgba(255, 98, 16, 0.12);
+			/* MFS Contact & Newsletter Form Styles */
+#mfs-contact-form { font-family: inherit; }
+#mfs-contact-form .fg { margin-bottom: 16px; }
+#mfs-contact-form .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+#mfs-contact-form label { display: block; font-weight: 600; margin-bottom: 5px; color: #2D6A4F; font-size: 14px; }
+#mfs-contact-form input[type=text],
+#mfs-contact-form input[type=email],
+#mfs-contact-form input[type=tel],
+#mfs-contact-form input[type=number],
+#mfs-contact-form textarea {
+  width: 100%; padding: 11px 14px; border: 1.5px solid #d4c9bc;
+  border-radius: 8px; font-size: 15px; font-family: inherit;
+  box-sizing: border-box; background: #fff; color: #333;
+  transition: border-color .2s;
 }
-
-/* Email Input Field */
-.mfs-newsletter-form .sureforms-field input[type="email"] {
-  width: 100%;
-  padding: 16px 20px;
-  font-size: 15px;
-  border: 2px solid #E0E0E0;
-  border-radius: 50px;
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+#mfs-contact-form input:focus,
+#mfs-contact-form textarea:focus { outline: none; border-color: #2D6A4F; }
+#mfs-contact-form textarea { height: 110px; resize: vertical; }
+#mfs-contact-form .radio-group, #mfs-contact-form .check-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+#mfs-contact-form .radio-group label, #mfs-contact-form .check-group label {
+  display: flex; align-items: center; gap: 6px; font-weight: 400;
+  color: #333; cursor: pointer; font-size: 14px; margin-bottom: 0;
+  background: #f7f4f0; border: 1.5px solid #ddd; border-radius: 6px; padding: 7px 12px;
+  transition: border-color .2s, background .2s;
 }
-
-.mfs-newsletter-form .sureforms-field input[type="email"]:focus {
-  border-color: #FF6210;
-  box-shadow: 0 0 0 3px rgba(255, 98, 16, 0.15);
+#mfs-contact-form .radio-group label:has(input:checked),
+#mfs-contact-form .check-group label:has(input:checked) {
+  border-color: #2D6A4F; background: #eaf4ef; color: #2D6A4F; font-weight: 600;
 }
-
-.mfs-newsletter-form .sureforms-field input[type="email"]::placeholder {
-  color: #999;
+#mfs-contact-form .radio-group input, #mfs-contact-form .check-group input { accent-color: #2D6A4F; }
+#mfs-contact-form .section-label { font-size: 13px; color: #777; margin-bottom: 6px; margin-top: 4px; display: block; }
+#mfs-contact-form button[type=submit] {
+  background: #F4A261; color: #fff; border: none; padding: 15px 40px;
+  border-radius: 50px; font-size: 16px; font-weight: 700; cursor: pointer;
+  transition: background .2s; width: 100%; margin-top: 8px; letter-spacing: .3px;
 }
-
-/* Submit Button - MFS Orange */
-.mfs-newsletter-form .sureforms-submit-btn,
-.mfs-newsletter-form button[type="submit"] {
-  background: linear-gradient(135deg, #FF6210 0%, #FF8C42 100%) !important;
-  color: white !important;
-  border: none !important;
-  padding: 16px 35px !important;
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  border-radius: 50px !important;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 100%;
-  margin-top: 15px;
+#mfs-contact-form button[type=submit]:hover { background: #e8914d; }
+#mfs-form-success { display:none; background:#eaf4ef; border:1px solid #a5d6a7; border-radius:10px; padding:24px; text-align:center; color:#2D6A4F; font-weight:700; margin-top:20px; font-size:16px; }
+#mfs-form-success p { margin: 8px 0 0; font-weight:400; color:#444; font-size:14px; }
+/* Newsletter */
+#mfs-newsletter-form { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+#mfs-newsletter-form input[type=email] {
+  flex:1; min-width:200px; padding:12px 18px; border:1.5px solid #d4c9bc;
+  border-radius:50px; font-size:15px; font-family:inherit; outline:none; background:#fff;
 }
-
-.mfs-newsletter-form .sureforms-submit-btn:hover,
-.mfs-newsletter-form button[type="submit"]:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 98, 16, 0.35) !important;
-}
-
-/* Hide Labels (using placeholder instead) */
-.mfs-newsletter-form .sureforms-field label {
-  display: none;
-}
-
-/* Success Message */
-.mfs-newsletter-form .sureforms-success-message {
-  background: #E8F5E9;
-  color: #2E7D32;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  font-weight: 600;
-}
-
-/* Mobile Responsive */
-@media (max-width: 600px) {
-  .mfs-newsletter-form .sureforms-form {
-    padding: 25px 20px;
-    border-radius: 16px;
-  }
+#mfs-newsletter-form input[type=email]:focus { border-color:#2D6A4F; }
+#mfs-newsletter-form button { background:#F4A261; color:#fff; border:none; padding:12px 28px; border-radius:50px; font-size:15px; font-weight:700; cursor:pointer; transition:background .2s; }
+#mfs-newsletter-form button:hover { background:#e8914d; }
+#mfs-nl-success { display:none; background:#eaf4ef; border:1px solid #a5d6a7; border-radius:8px; padding:14px 18px; color:#2D6A4F; font-weight:600; margin-top:12px; }
+@media(max-width:600px){
+  #mfs-contact-form .fg-row { grid-template-columns: 1fr; }
 }		</style>
 		<style id="block-style-variation-styles-inline-css">
 :root :where(.wp-block-button.is-style-outline--1 .wp-block-button__link){background: transparent none;border-color: currentColor;border-width: 2px;border-style: solid;color: currentColor;padding-top: 0.667em;padding-right: 1.33em;padding-bottom: 0.667em;padding-left: 1.33em;}
@@ -767,111 +744,180 @@ gtag("config", "GT-W6X7VX9N");
 <div class="wp-block-uagb-container uagb-block-vailkump alignfull uagb-is-root-container"><div class="uagb-container-inner-blocks-wrap">
 <div class="wp-block-uagb-info-box uagb-block-zwrdspqm uagb-infobox__content-wrap  uagb-infobox-icon-above-title uagb-infobox-image-valign-top"><div class="uagb-ifb-content"><div class="uagb-ifb-title-wrap"><h2 class="uagb-ifb-title">🔔 Get Priority Access to New Maltipoo &amp; Maltese Litters</h2></div><div class="uagb-ifb-separator"></div><div class="uagb-ifb-desc">
 			
-<div id="contact-form-section" style="padding: 40px 20px; max-width: 700px; margin: 0 auto;">
-  <style>
-    #mfs-contact-form { font-family: inherit; }
-    #mfs-contact-form .form-group { margin-bottom: 18px; }
-    #mfs-contact-form label { display: block; font-weight: 600; margin-bottom: 6px; color: #333; font-size: 15px; }
-    #mfs-contact-form input, #mfs-contact-form select, #mfs-contact-form textarea {
-      width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px;
-      font-size: 15px; font-family: inherit; box-sizing: border-box; background: #fafafa; color: #333;
-    }
-    #mfs-contact-form input:focus, #mfs-contact-form select:focus, #mfs-contact-form textarea:focus {
-      outline: none; border-color: #c8a96e; background: #fff;
-    }
-    #mfs-contact-form textarea { height: 140px; resize: vertical; }
-    #mfs-contact-form button[type="submit"] {
-      background: #c8a96e; color: #fff; border: none; padding: 14px 40px;
-      border-radius: 50px; font-size: 15px; font-weight: 600; cursor: pointer;
-      transition: background 0.2s; width: 100%;
-    }
-    #mfs-contact-form button[type="submit"]:hover { background: #333; }
-    #mfs-contact-form .form-notice { font-size: 13px; color: #888; margin-top: 12px; text-align: center; }
-    #mfs-form-success { display:none; background:#e8f5e9; border:1px solid #a5d6a7; border-radius:8px; padding:20px; text-align:center; color:#2e7d32; font-weight:600; margin-top:20px; }
-  </style>
-  <form id="mfs-contact-form" action="https://formspree.io/f/xdkobvpq" method="POST">
-    <input type="hidden" name="_subject" value="New Puppy Enquiry - MaltipoosforsaleI.com">
-    <div class="form-group">
-      <label for="mfs-name">Your Name *</label>
-      <input type="text" id="mfs-name" name="name" placeholder="e.g. Jane Smith" required>
+<div id="contact-form-section" style="padding: 30px 20px 20px; max-width: 720px; margin: 0 auto;">
+  <form id="mfs-contact-form" action="https://formspree.io/f/xpqoeazq" method="POST">
+    <input type="hidden" name="_subject" value="New Puppy Inquiry — MaltipoosForsale.com">
+
+    <div class="fg fg-row">
+      <div>
+        <label for="mfs-fname">First Name *</label>
+        <input type="text" id="mfs-fname" name="first_name" placeholder="Jane" required>
+      </div>
+      <div>
+        <label for="mfs-lname">Last Name *</label>
+        <input type="text" id="mfs-lname" name="last_name" placeholder="Smith" required>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="mfs-email">Email Address *</label>
-      <input type="email" id="mfs-email" name="email" placeholder="your@email.com" required>
+
+    <div class="fg fg-row">
+      <div>
+        <label for="mfs-email">Email *</label>
+        <input type="email" id="mfs-email" name="email" placeholder="your@email.com" required>
+      </div>
+      <div>
+        <label for="mfs-email2">Confirm Email *</label>
+        <input type="email" id="mfs-email2" name="confirm_email" placeholder="your@email.com" required>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="mfs-phone">Phone Number</label>
-      <input type="tel" id="mfs-phone" name="phone" placeholder="+1 (555) 000-0000">
+
+    <div class="fg fg-row">
+      <div>
+        <label for="mfs-phone">Phone *</label>
+        <input type="tel" id="mfs-phone" name="phone" placeholder="+1 (555) 000-0000" required>
+      </div>
+      <div>
+        <label for="mfs-phone2">Confirm Phone *</label>
+        <input type="tel" id="mfs-phone2" name="confirm_phone" placeholder="+1 (555) 000-0000" required>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="mfs-interest">I'm interested in...</label>
-      <select id="mfs-interest" name="interest">
-        <option value="">-- Please select --</option>
-        <option value="Teacup Maltipoo">Teacup Maltipoo</option>
-        <option value="Toy Maltipoo">Toy Maltipoo</option>
-        <option value="Mini Maltipoo">Mini Maltipoo</option>
-        <option value="Teacup Maltese">Teacup Maltese</option>
-        <option value="Standard Maltese">Standard Maltese</option>
-        <option value="General Question">General Question</option>
-      </select>
+
+    <div class="fg">
+      <label for="mfs-state">State / Location *</label>
+      <input type="text" id="mfs-state" name="state_location" placeholder="e.g. Texas, New York, California…" required>
     </div>
-    <div class="form-group">
-      <label for="mfs-message">Your Message *</label>
-      <textarea id="mfs-message" name="message" placeholder="Tell us what you're looking for..." required></textarea>
+
+    <div class="fg">
+      <label>Have you owned a Maltipoo or Maltese before?</label>
+      <div class="check-group">
+        <label><input type="checkbox" name="prior_experience" value="Yes"> Yes, I have experience with these breeds</label>
+      </div>
     </div>
-    <button type="submit">Send Enquiry &rarr;</button>
-    <p class="form-notice">We respond within 24&ndash;48 hours.</p>
+
+    <div class="fg">
+      <label>I'm interested in: *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="breed_interest" value="Maltipoo" required> Maltipoo</label>
+        <label><input type="radio" name="breed_interest" value="Maltese"> Maltese</label>
+        <label><input type="radio" name="breed_interest" value="Not sure yet"> Not sure yet</label>
+      </div>
+    </div>
+
+    <div class="fg">
+      <label>Preferred size: *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="preferred_size" value="Mini/Standard" required> Mini / Standard</label>
+        <label><input type="radio" name="preferred_size" value="Micro/Tiny"> Micro / Tiny</label>
+        <label><input type="radio" name="preferred_size" value="Teacup"> Teacup</label>
+        <label><input type="radio" name="preferred_size" value="Toy"> Toy</label>
+      </div>
+    </div>
+
+    <div class="fg">
+      <label>TIMELINE: How soon do you want the puppy? *<span class="section-label">Our puppies go FAST — this will be our last litter until 2027.</span></label>
+      <div class="radio-group">
+        <label><input type="radio" name="timeline" value="Ready NOW" required> Ready NOW</label>
+        <label><input type="radio" name="timeline" value="1-2 Weeks"> 1–2 Weeks</label>
+        <label><input type="radio" name="timeline" value="1-3 Months"> 1–3 Months</label>
+        <label><input type="radio" name="timeline" value="Just researching"> Just researching</label>
+      </div>
+    </div>
+
+    <div class="fg">
+      <label for="mfs-puppy">Puppy Name *</label>
+      <input type="text" id="mfs-puppy" name="puppy_name" placeholder="Type the exact name of the puppy you want" required>
+    </div>
+
+    <div class="fg">
+      <label for="mfs-alone">How many hours a day would the puppy be left alone? *</label>
+      <input type="text" id="mfs-alone" name="hours_alone" placeholder="e.g. 2 hours" required>
+    </div>
+
+    <div class="fg">
+      <label for="mfs-reason">What is your main reason for getting a Maltipoo or Maltese puppy right now? *</label>
+      <textarea id="mfs-reason" name="main_reason" placeholder="Please share your reasons…" required></textarea>
+    </div>
+
+    <div class="fg">
+      <label>We are located in Omaha, Nebraska. Do you have the funds to pay for the puppy &amp; shipping?</label>
+      <div class="check-group">
+        <label><input type="checkbox" name="has_funds" value="Yes"> Yes, I have the funds available</label>
+      </div>
+    </div>
+
+    <div class="fg">
+      <label>How would you like to receive your puppy? *</label>
+      <div class="radio-group" style="flex-direction:column;">
+        <label><input type="radio" name="delivery_preference" value="Airport Flight Nanny" required> ✈️ <strong>AIRPORT FLIGHT NANNY DELIVERY</strong> — Pick up at your nearest local airport (our preferred method, no extra cost)</label>
+        <label><input type="radio" name="delivery_preference" value="Doorstep Delivery (+$375)"> 🚗 <strong>DOORSTEP DELIVERY</strong> — Add +$375 for ground transport from airport to your home</label>
+        <label><input type="radio" name="delivery_preference" value="Hold & Deliver Later"> 📦 <strong>HOLD PUPPY &amp; DELIVER LATER</strong> — We hold your puppy up to 2 months at no extra cost after payment</label>
+      </div>
+    </div>
+
+    <div class="fg">
+      <label for="mfs-message">Your message / questions? *</label>
+      <textarea id="mfs-message" name="message" placeholder="Any questions or additional details…" required></textarea>
+    </div>
+
+    <button type="submit">SUBMIT FORM &rarr;</button>
+    <p style="font-size:13px;color:#888;text-align:center;margin-top:10px;">We respond within 24–48 hours &bull; puppies@maltipoosforsale.com</p>
   </form>
   <div id="mfs-form-success">
-    &#10003; Thank you! We'll be in touch within 24&ndash;48 hours.
+    &#10003; Thank you! Your inquiry has been received.
+    <p>We'll be in touch within 24–48 hours. Check your email (including spam folder).</p>
   </div>
   <script>
-    (function(){
-      var form = document.getElementById('mfs-contact-form');
-      var success = document.getElementById('mfs-form-success');
-      if(!form) return;
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        var data = new FormData(form);
-        fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}})
-          .then(function(r){
-            if(r.ok){ form.style.display='none'; success.style.display='block'; }
-            else { alert('Sorry, there was an error. Please email us directly.'); }
-          })
-          .catch(function(){ alert('Sorry, there was an error. Please email us directly.'); });
-      });
-    })();
+  (function(){
+    var form=document.getElementById('mfs-contact-form');
+    var ok=document.getElementById('mfs-form-success');
+    if(!form)return;
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var e2=form.querySelector('[name=email]').value;
+      var e3=form.querySelector('[name=confirm_email]').value;
+      if(e2!==e3){alert('Email addresses do not match. Please check and try again.');return;}
+      var p2=form.querySelector('[name=phone]').value;
+      var p3=form.querySelector('[name=confirm_phone]').value;
+      if(p2!==p3){alert('Phone numbers do not match. Please check and try again.');return;}
+      var btn=form.querySelector('button[type=submit]');
+      btn.disabled=true;btn.textContent='Sending…';
+      fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+        .then(function(r){
+          if(r.ok){form.style.display='none';ok.style.display='block';}
+          else{alert('Sorry, something went wrong. Please email puppies@maltipoosforsale.com directly.');btn.disabled=false;btn.textContent='SUBMIT FORM →';}
+        })
+        .catch(function(){alert('Network error. Please email puppies@maltipoosforsale.com directly.');btn.disabled=false;btn.textContent='SUBMIT FORM →';});
+    });
+  })();
   </script>
 </div>
-<div data-block-id="831b7349" class=" 8100 srf-inline-button-831b7349-block srfm-block-width-33-33 srfm-block srfm-custom-button-ctn ">
-								<button style="font-family: inherit; font-weight: var(--wp--custom--font-weight--medium); line-height: normal;width:100%;" id="srfm-submit-btn" class="srfm-button srfm-submit-button srfm-btn-frontend srfm-custom-button">
-					<div class="srfm-submit-wrap">
-						Subscribe 🐾						<div class="srfm-loader"></div>
-					</div>
-				</button>
-				<div class="srfm-error-wrap"></div>
-			</div>
-									
-					
-					<div class="srfm-submit-container " style="visibility:hidden;position:absolute;">
-						<div style="width: ; text-align: left" class="wp-block-button">
-																								</div>
-					</div>
-							<p id="srfm-error-message" class="srfm-common-error-message srfm-error-message srfm-footer-error" hidden>		<span class="srfm-icon" aria-hidden="true">
-			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M9.99935 18.3327C14.6017 18.3327 18.3327 14.6017 18.3327 9.99935C18.3327 5.39698 14.6017 1.66602 9.99935 1.66602C5.39698 1.66602 1.66602 5.39698 1.66602 9.99935C1.66602 14.6017 5.39698 18.3327 9.99935 18.3327Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 6.66602V9.99935" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 13.334H10.0083" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>		</span>
-		<span class="srfm-error-content">There was an error trying to submit your form. Please try again.</span></p>
-					</form>
-			<div class="srfm-single-form srfm-success-box in-page">
-				<div aria-live="polite" aria-atomic="true" role="alert" id="srfm-success-message-page-8100" class="srfm-success-box-description"></div>
-			</div>
-						</div>
-		
+
 </div></div></div>
 
 
 
 <div class="wp-block-uagb-info-box uagb-block-a8gxk4q1 uagb-infobox__content-wrap  uagb-infobox-icon-above-title uagb-infobox-image-valign-top"><div class="uagb-ifb-content"><div class="uagb-ifb-title-wrap"></div><div class="uagb-ifb-desc">
-<p>Join 2,500+ families on our priority notification list. Be the first to know when new puppies are born—before they’re posted publicly.<br><br>✅ Weekly litter announcements<br>✅ Exclusive early reservation access<br>✅ Expert Care Advice<br>✅ Unsubscribe anytime <br></p>
+<p>Join 2,500+ families on our priority notification list. Be the first to know when new puppies are born—before they’re posted publicly.</p>
+<p>✅ Weekly litter announcements &nbsp; ✅ Exclusive early reservation access &nbsp; ✅ Expert care advice &nbsp; ✅ Unsubscribe anytime</p>
+<form id="mfs-newsletter-form" action="https://formspree.io/f/xpqoeazq" method="POST">
+  <input type="hidden" name="_subject" value="Newsletter Signup — MaltipoosForsale.com">
+  <input type="email" name="email" placeholder="Enter your email address…" required>
+  <button type="submit">Subscribe 🐾</button>
+</form>
+<div id="mfs-nl-success">✅ You’re on the list! We’ll notify you first when new litters arrive.</div>
+<script>
+(function(){
+  var f=document.getElementById(‘mfs-newsletter-form’);
+  var s=document.getElementById(‘mfs-nl-success’);
+  if(!f)return;
+  f.addEventListener(‘submit’,function(e){
+    e.preventDefault();
+    var btn=f.querySelector(‘button’);btn.disabled=true;btn.textContent=’Subscribing…’;
+    fetch(f.action,{method:’POST’,body:new FormData(f),headers:{‘Accept’:’application/json’}})
+      .then(function(r){if(r.ok){f.style.display=’none’;s.style.display=’block’;}else{btn.disabled=false;btn.textContent=’Subscribe 🐾’;}})
+      .catch(function(){btn.disabled=false;btn.textContent=’Subscribe 🐾’;});
+  });
+})();
+</script>
 </div></div></div>
 </div></div>
 
