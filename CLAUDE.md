@@ -78,6 +78,7 @@ urllib.request.urlopen(req)
 | Indexing | `MFS-INDEXING-SKILL.md` | After any deploy, sitemap fixes, GSC submission |
 | Broken Links | `MFS-BROKEN-LINKS-SKILL.md` | GSC 404 errors, broken internal links, missing hub pages |
 | Contact Form | `MFS-CONTACT-FORM-SKILL.md` | Form audit/fix, Formspree ID, newsletter, batch apply to all pages |
+| YouTube | `MFS-YOUTUBE-SKILL.md` | Fix broken iframes, video-sitemap.xml errors, add new videos |
 | Location Pages | `LOCATION-PAGE-BUILDER-SKILL.md` | Creating state/city pages |
 | Design Rebuild | `MFS-DESIGN-REBUILD-SKILL.md` | Redesigning pages with new design system |
 | SEO Content | `MFS.md` | All content creation, keyword strategy |
@@ -120,7 +121,12 @@ Then use: `/audit`, `/critique`, `/polish`, `/typeset`, `/layout`
 - ✅ 14 broken internal links fixed (redirects + /usa-locations/ hub page)
 - ✅ 12 URLs re-submitted to IndexNow after link fixes
 - ✅ Homepage contact form: 5-field stub → full 17-field Formspree form (xpqoeazq)
-- ✅ Homepage newsletter: broken SureForms → working Formspree email signup
+- ✅ Homepage newsletter: 3× SureForms blocks → modern orange/white Formspree widgets
+- ✅ Homepage YouTube iframes: data-src → src (lazy-load fix)
+- ✅ contact-2, white-maltese, teacup-maltipoo-puppies, ny/ga location pages: upgraded to full 17-field form + correct Formspree ID
+- ✅ video-sitemap.xml: 9 relative uploader URLs fixed, thumbnail_loc added to all 9 entries
+- ✅ 128 inner pages: injected missing Astra main.min.css (broken header fix)
+- ✅ YouTube Agent skill created (MFS-YOUTUBE-SKILL.md)
 
 ## What's Next
 1. Run 7 Claude Design prompts in claude.ai (from MFS-DESIGN-REBUILD-SKILL.md)
