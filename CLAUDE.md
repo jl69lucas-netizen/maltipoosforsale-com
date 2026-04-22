@@ -93,11 +93,14 @@ Installed at `.claude/skills/` — run at start of any design session:
 ```
 Then use: `/audit`, `/critique`, `/polish`, `/typeset`, `/layout`
 
-## Design System (defined in MFS-DESIGN-REBUILD-SKILL.md)
-- **Primary:** `#2D6A4F` forest green
-- **Accent/CTA:** `#F4A261` warm orange
-- **Background:** `#FFF8F0` cream
+## Design System v1.1 (defined in MFS-DESIGN-REBUILD-SKILL.md)
+- **Primary/Hero:** `#FF8C00` dark orange (hero backgrounds, section highlights)
+- **Accent/CTA:** `#FFA500` vibrant orange (transactional buttons)
+- **Ink/Text:** `#000000` black (all body text — WCAG AAA on white)
+- **Canvas:** `#FFFFFF` white + `#F8F9FA` off-white (alternating sections)
 - **Fonts:** Rosario (headings, 700) + Open Sans (body, 500) — already loaded
+- **Radius:** `8px` standard corner radius
+- **Reference page:** `/male-vs-female-maltipoo/` — fully redesigned 2026-04-21
 
 ## Top Pages by GSC Traffic (redesign priority)
 1. Homepage `/` — 78 clicks, 4,345 impr, pos 57
