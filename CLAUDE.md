@@ -82,6 +82,7 @@ urllib.request.urlopen(req)
 | Google Map | `MFS-GOOGLE-MAP-SKILL.md` | Fix broken embed maps, add maps to location pages |
 | Location Pages | `LOCATION-PAGE-BUILDER-SKILL.md` | Creating state/city pages |
 | Design Rebuild | `MFS-DESIGN-REBUILD-SKILL.md` | Redesigning pages with new design system |
+| Footer Agent | `MFS-FOOTER-AGENT-SKILL.md` | Apply/update standard footer on all pages (run `rebuild_footer.py`) |
 | SEO Content | `MFS.md` | All content creation, keyword strategy |
 
 All skill files are in `/Users/apple/Downloads/MFS/`
