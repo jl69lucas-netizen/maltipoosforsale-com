@@ -589,294 +589,410 @@ gtag("config", "GT-W6X7VX9N");
 		
 <div class="entry-content clear" data-ast-blocks-layout="true" itemprop="text">
 
-<!-- ============================================================
-     MFS DESIGN SYSTEM v1.1
-     Page: Male vs Female Maltipoo
-     Tokens: primary=#FF8C00 | surface=#F8F9FA | ink=#000000
-     Mobile-first | WCAG 2.1 AA | Rosario Headlines | Open Sans Body
-     ============================================================ -->
-
 <style>
-/* === MFS Design Tokens === */
+/* ── MFS Design Tokens v1.1 ─────────────────────────────────────── */
 :root {
-  --mfs-primary: #FF8C00;
-  --mfs-accent:  #FFA500;
-  --mfs-ink:     #000000;
-  --mfs-neutral: #FFFFFF;
-  --mfs-surface: #F8F9FA;
-  --mfs-border:  #E9ECEF;
-  --mfs-radius:  8px;
-  --mfs-shadow:  0 2px 12px rgba(0,0,0,.08);
+  --mfs-primary:     #FF8C00;
+  --mfs-ink:         #000000;
+  --mfs-neutral:     #FFFFFF;
+  --mfs-surface:     #F8F9FA;
+  --mfs-warm:        #FFF8F0;
+  --mfs-border:      #E9ECEF;
+  --mfs-radius:      8px;
+  --mfs-shadow:      0 2px 16px rgba(0,0,0,.09);
+  --mfs-orange-text: #A85500; /* WCAG AA on white: 5.25:1 — for orange text on light bg */
 }
 
-/* === Shared Layout === */
-.mfs-section { padding: 48px 20px; }
-.mfs-section-alt { background: var(--mfs-surface); }
-.mfs-container { max-width: 860px; margin: 0 auto; }
-.mfs-tag {
-  display: inline-block; background: var(--mfs-primary); color: #fff;
-  font-size: .75rem; font-weight: 700; letter-spacing: .06em;
-  text-transform: uppercase; padding: 4px 12px; border-radius: 50px;
-  margin-bottom: 12px;
+/* ── Layout ─────────────────────────────────────────────────────── */
+.mfs-section     { padding: clamp(2.5rem,6vw,4rem) 1.25rem; background:#fff; }
+.mfs-section-alt { padding: clamp(2.5rem,6vw,4rem) 1.25rem; background:var(--mfs-surface); }
+.mfs-container   { max-width:880px; margin:0 auto; }
+.mfs-grid-2      { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+
+/* ── Typography ─────────────────────────────────────────────────── */
+.mfs-eyebrow {
+  font-family:'Open Sans',sans-serif; font-size:.7rem; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase;
+  color:var(--mfs-orange-text); /* 5.25:1 on white WCAG AA ✓ */
+  display:block; margin-bottom:10px;
 }
 .mfs-h1 {
-  font-family: 'Rosario', serif; font-size: clamp(1.9rem, 5vw, 2.8rem);
-  font-weight: 700; color: var(--mfs-ink); line-height: 1.15;
-  margin: 0 0 16px;
+  font-family:'Rosario',serif; font-size:clamp(1.85rem,4.8vw,2.85rem);
+  font-weight:700; color:var(--mfs-ink); line-height:1.1; margin:0 0 14px;
 }
 .mfs-h2 {
-  font-family: 'Rosario', serif; font-size: clamp(1.4rem, 4vw, 2rem);
-  font-weight: 700; color: var(--mfs-ink); line-height: 1.2;
-  margin: 0 0 12px;
+  font-family:'Rosario',serif; font-size:clamp(1.3rem,3.5vw,1.9rem);
+  font-weight:700; color:var(--mfs-ink); line-height:1.2; margin:0 0 12px;
 }
 .mfs-h3 {
-  font-family: 'Rosario', serif; font-size: 1.15rem; font-weight: 700;
-  color: var(--mfs-ink); margin: 0 0 8px;
+  font-family:'Rosario',serif; font-size:1.08rem; font-weight:700;
+  color:var(--mfs-ink); margin:0 0 6px;
 }
-.mfs-lead { font-size: 1.1rem; color: #333; line-height: 1.7; margin: 0 0 20px; }
-.mfs-body { font-size: 1rem; color: #444; line-height: 1.75; margin: 0 0 16px; }
+.mfs-lead { font-family:'Open Sans',sans-serif; font-size:1.04rem; color:#222; line-height:1.75; margin:0 0 18px; }
+.mfs-body { font-family:'Open Sans',sans-serif; font-size:.96rem; color:#333; line-height:1.75; margin:0 0 12px; }
 
-/* === Buttons === */
+/* ── Buttons — black text on orange = 9.04:1 WCAG AAA ✓ ─────── */
 .mfs-btn {
-  display: inline-block; background: var(--mfs-primary); color: #fff;
-  font-weight: 700; font-size: 1rem; padding: 14px 32px;
-  border-radius: var(--mfs-radius); text-decoration: none;
-  transition: background .2s, transform .1s; cursor: pointer;
-  border: none;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:var(--mfs-primary); color:var(--mfs-ink); /* #000 on #FF8C00 = 9.04:1 ✓ */
+  font-family:'Open Sans',sans-serif; font-size:.95rem; font-weight:700;
+  padding:13px 28px; border-radius:var(--mfs-radius); text-decoration:none;
+  border:none; cursor:pointer; min-height:44px;
+  transition:background .2s, transform .1s;
 }
-.mfs-btn:hover { background: #e07800; color: #fff; transform: translateY(-1px); }
+.mfs-btn:hover { background:#d97800; color:var(--mfs-ink); transform:translateY(-1px); }
+
 .mfs-btn-outline {
-  display: inline-block; border: 2px solid var(--mfs-primary);
-  color: var(--mfs-primary); font-weight: 700; font-size: .95rem;
-  padding: 11px 28px; border-radius: var(--mfs-radius);
-  text-decoration: none; transition: all .2s;
+  display:inline-flex; align-items:center; justify-content:center;
+  border:2px solid var(--mfs-primary); color:var(--mfs-ink); /* #000 on white = 21:1 ✓ */
+  background:transparent; font-family:'Open Sans',sans-serif;
+  font-size:.95rem; font-weight:700; padding:11px 26px;
+  border-radius:var(--mfs-radius); text-decoration:none; min-height:44px;
+  transition:all .2s;
 }
-.mfs-btn-outline:hover { background: var(--mfs-primary); color: #fff; }
+.mfs-btn-outline:hover { background:var(--mfs-primary); color:var(--mfs-ink); }
 
-/* === Cards === */
-.mfs-card {
-  background: var(--mfs-neutral); border-radius: 12px;
-  box-shadow: var(--mfs-shadow); padding: 28px 24px;
+/* ── Hero — split layout, warm cream background ─────────────── */
+.mfs-hero { background:var(--mfs-warm); padding:clamp(2.5rem,5vw,4.5rem) 1.5rem; }
+.mfs-hero-inner {
+  display:grid; grid-template-columns:1.1fr 1fr;
+  gap:clamp(2rem,4vw,4rem); align-items:center;
+  max-width:1100px; margin:0 auto;
 }
-.mfs-card-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px; margin-top: 28px;
+.mfs-hero-eyebrow {
+  font-family:'Open Sans',sans-serif; font-size:.7rem; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase;
+  color:var(--mfs-orange-text); /* 5.25:1 on cream ✓ */
+  margin-bottom:12px; display:block;
 }
-
-/* === Hero === */
-.mfs-hero {
-  background: linear-gradient(135deg, #FF8C00 0%, #e07000 100%);
-  color: #fff; padding: 56px 20px 48px; text-align: center;
-}
-.mfs-hero .mfs-h1 { color: #fff; }
-.mfs-hero .mfs-lead { color: rgba(255,255,255,.92); }
-.mfs-trust-badges {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 10px 20px; margin: 20px 0 28px;
-}
+.mfs-trust-badges { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px; }
 .mfs-badge {
-  background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
-  color: #fff; font-size: .82rem; font-weight: 600; padding: 6px 14px;
-  border-radius: 50px; backdrop-filter: blur(4px);
+  background:rgba(255,140,0,.1); border:1px solid rgba(255,140,0,.4);
+  color:var(--mfs-ink); /* #000 on near-white = 21:1 ✓ */
+  font-family:'Open Sans',sans-serif; font-size:.77rem; font-weight:700;
+  padding:6px 13px; border-radius:50px;
 }
-.mfs-hero .mfs-btn {
-  background: #fff; color: var(--mfs-primary); font-size: 1.05rem;
-  padding: 16px 36px;
-}
-.mfs-hero .mfs-btn:hover { background: #f0f0f0; color: var(--mfs-primary); }
+.mfs-hero-ctas { display:flex; flex-wrap:wrap; gap:10px; }
+.mfs-hero-note { font-family:'Open Sans',sans-serif; font-size:.82rem; color:#666; margin-top:11px; }
 
-/* === Cheat-sheet cards === */
-.mfs-fact-card {
-  background: var(--mfs-neutral); border-radius: 10px;
-  box-shadow: var(--mfs-shadow); padding: 20px;
-  border-left: 4px solid var(--mfs-primary);
+/* Hero photo */
+.mfs-hero-media { position:relative; padding-bottom:20px; padding-right:16px; }
+.mfs-hero-img-wrap {
+  border-radius:16px; overflow:hidden; aspect-ratio:4/3;
+  /* Brand orange offset shadow — editorial, distinctive, not a border-left */
+  box-shadow:14px 14px 0 var(--mfs-primary), var(--mfs-shadow);
 }
-.mfs-fact-card .icon { font-size: 1.6rem; margin-bottom: 8px; }
-.mfs-fact-card strong { display: block; color: var(--mfs-ink); margin-bottom: 4px; }
-.mfs-fact-card p { font-size: .92rem; color: #555; margin: 0; line-height: 1.55; }
+.mfs-hero-img-wrap img { width:100%; height:100%; object-fit:cover; display:block; }
+.mfs-hero-pill {
+  position:absolute; bottom:4px; right:0;
+  background:var(--mfs-ink); color:#fff; /* white on black >15:1 ✓ */
+  font-family:'Open Sans',sans-serif; font-size:.82rem; font-weight:700;
+  padding:8px 16px; border-radius:50px;
+  box-shadow:0 4px 12px rgba(0,0,0,.22); white-space:nowrap;
+}
 
-/* === Comparison table === */
+/* ── Editorial numbered list (replaces generic icon cards) ──── */
+.mfs-editorial { display:flex; flex-direction:column; gap:0; margin-top:28px; }
+.mfs-editorial-item {
+  display:grid; grid-template-columns:60px 1fr;
+  gap:12px 18px; padding:22px 0;
+  border-bottom:1px solid var(--mfs-border);
+  align-items:start;
+}
+.mfs-editorial-item:last-child { border-bottom:none; }
+.mfs-editorial-num {
+  font-family:'Rosario',serif; font-size:2.4rem; font-weight:700;
+  color:var(--mfs-primary); line-height:1; padding-top:3px;
+}
+.mfs-editorial-content strong {
+  font-family:'Rosario',serif; font-size:1.04rem; font-weight:700;
+  color:var(--mfs-ink); display:block; margin-bottom:5px;
+}
+.mfs-editorial-content p {
+  font-family:'Open Sans',sans-serif; font-size:.92rem; color:#444; line-height:1.7; margin:0;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.mfs-card {
+  background:#fff; border-radius:10px; box-shadow:var(--mfs-shadow);
+  padding:24px 22px; border:1px solid var(--mfs-border);
+}
+
+/* ── Gender cards — full header band, NO border-left ─────────
+   Impeccable absolute ban: no border-left accent stripes.
+   Alternative: full-width colored header. ─────────────────── */
+.mfs-gender-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px; }
+.mfs-gc          { border-radius:10px; overflow:hidden; box-shadow:var(--mfs-shadow); }
+.mfs-gc-head     { padding:13px 20px; font-family:'Rosario',serif; font-weight:700; font-size:1.04rem; }
+.mfs-gc--male   .mfs-gc-head { background:var(--mfs-primary); color:var(--mfs-ink); } /* 9.04:1 WCAG AAA ✓ */
+.mfs-gc--female .mfs-gc-head { background:#1a1a1a; color:#fff; }                        /* >15:1 ✓ */
+.mfs-gc-body { padding:18px 20px; background:#fff; }
+.mfs-gc-body ul { margin:0; padding-left:18px; color:#333; font-family:'Open Sans',sans-serif; font-size:.91rem; line-height:1.85; }
+
+/* ── Comparison table ───────────────────────────────────────── */
 .mfs-compare {
-  width: 100%; border-collapse: collapse; margin-top: 24px;
-  border-radius: 10px; overflow: hidden; box-shadow: var(--mfs-shadow);
-  font-size: .95rem;
+  width:100%; border-collapse:collapse; margin-top:22px;
+  border-radius:10px; overflow:hidden; box-shadow:var(--mfs-shadow); font-size:.93rem;
 }
-.mfs-compare th {
-  padding: 14px 20px; text-align: center; font-weight: 700; font-size: 1rem;
-}
-.mfs-compare th:nth-child(1) { background: var(--mfs-surface); color: var(--mfs-ink); text-align: left; }
-.mfs-compare th:nth-child(2) { background: var(--mfs-primary); color: #fff; }
-.mfs-compare th:nth-child(3) { background: #333; color: #fff; }
-.mfs-compare td {
-  padding: 12px 20px; border-top: 1px solid var(--mfs-border);
-  vertical-align: top;
-}
-.mfs-compare td:nth-child(1) { font-weight: 600; color: var(--mfs-ink); background: var(--mfs-surface); }
-.mfs-compare td:nth-child(2) { color: #444; text-align: center; background: #fff; }
-.mfs-compare td:nth-child(3) { color: #444; text-align: center; background: #fafafa; }
-.mfs-compare tr:hover td { background: #fff8f0; }
+.mfs-compare th { padding:13px 18px; font-weight:700; font-family:'Open Sans',sans-serif; }
+.mfs-compare th:nth-child(1) { background:var(--mfs-surface); color:var(--mfs-ink); text-align:left; }
+.mfs-compare th:nth-child(2) { background:var(--mfs-primary); color:var(--mfs-ink); text-align:center; } /* 9.04:1 ✓ */
+.mfs-compare th:nth-child(3) { background:#222; color:#fff; text-align:center; }                         /* >15:1 ✓ */
+.mfs-compare td { padding:11px 18px; border-top:1px solid var(--mfs-border); vertical-align:top; font-family:'Open Sans',sans-serif; }
+.mfs-compare td:nth-child(1) { font-weight:600; color:var(--mfs-ink); background:var(--mfs-surface); }
+.mfs-compare td:nth-child(2) { color:#333; text-align:center; }
+.mfs-compare td:nth-child(3) { color:#333; text-align:center; background:#fafafa; }
+.mfs-compare tr:hover td     { background:var(--mfs-warm); }
 
-/* === Myth-buster === */
-.mfs-myth {
-  background: #fff8f0; border: 2px solid var(--mfs-primary);
-  border-radius: 12px; padding: 28px 24px; margin-top: 24px;
-}
-.mfs-myth-label {
-  font-size: .75rem; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .08em; color: var(--mfs-primary); margin-bottom: 6px;
-}
-.mfs-myth h3 { margin-bottom: 10px; color: var(--mfs-ink); }
+/* ── Info / warm card ────────────────────────────────────────── */
+.mfs-info-card { background:var(--mfs-warm); border:1px solid #FFD09B; border-radius:10px; padding:20px 22px; margin-top:20px; }
+.mfs-myth      { background:var(--mfs-warm); border:1px solid #FFD09B; border-radius:10px; padding:22px 22px; margin-top:22px; }
+.mfs-notice    { font-family:'Open Sans',sans-serif; font-size:.88rem; color:#333; background:var(--mfs-surface); border-radius:6px; padding:11px 15px; margin-top:12px; line-height:1.6; }
 
-/* === CTA Strip === */
-.mfs-cta-strip {
-  background: linear-gradient(135deg, #FF8C00, #e07000);
-  border-radius: 16px; padding: 40px 32px; text-align: center;
-  margin: 40px 0;
-}
-.mfs-cta-strip h2 { color: #fff; margin-bottom: 10px; }
-.mfs-cta-strip p { color: rgba(255,255,255,.9); margin-bottom: 24px; }
-.mfs-cta-strip .mfs-btn { background: #fff; color: var(--mfs-primary); }
-.mfs-cta-strip .mfs-btn:hover { background: #f5f5f5; }
+/* ── Tip card ────────────────────────────────────────────────── */
+.mfs-tip { display:flex; gap:14px; align-items:flex-start; background:var(--mfs-surface); border-radius:10px; padding:16px 18px; }
+.mfs-tip-icon { font-size:1.65rem; flex-shrink:0; }
+.mfs-tip h3   { margin:0 0 5px; }
+.mfs-tip p    { margin:0; font-family:'Open Sans',sans-serif; font-size:.9rem; color:#444; line-height:1.65; }
 
-/* === FAQ Accordion === */
-.mfs-faq details {
-  background: var(--mfs-neutral); border: 1px solid var(--mfs-border);
-  border-radius: 8px; padding: 16px 20px; margin-bottom: 10px;
-  cursor: pointer;
-}
-.mfs-faq details[open] { border-color: var(--mfs-primary); }
+/* ── FAQ ─────────────────────────────────────────────────────── */
+.mfs-faq details { background:#fff; border:1px solid var(--mfs-border); border-radius:8px; padding:15px 20px; margin-bottom:8px; }
+.mfs-faq details[open] { border-color:var(--mfs-primary); }
 .mfs-faq summary {
-  font-weight: 700; font-size: 1rem; color: var(--mfs-ink);
-  list-style: none; display: flex; justify-content: space-between;
-  align-items: center;
+  font-family:'Open Sans',sans-serif; font-weight:700; font-size:.96rem; color:var(--mfs-ink);
+  list-style:none; display:flex; justify-content:space-between; align-items:center; cursor:pointer;
 }
-.mfs-faq summary::after {
-  content: "+"; font-size: 1.4rem; color: var(--mfs-primary);
-  transition: transform .2s;
-}
-.mfs-faq details[open] summary::after { content: "−"; }
-.mfs-faq summary::-webkit-details-marker { display: none; }
-.mfs-faq p { margin: 12px 0 0; color: #444; line-height: 1.65; }
+.mfs-faq summary::after { content:"+"; font-size:1.25rem; color:var(--mfs-primary); flex-shrink:0; margin-left:10px; }
+.mfs-faq details[open] summary::after { content:"−"; }
+.mfs-faq summary::-webkit-details-marker { display:none; }
+.mfs-faq p { margin:11px 0 0; color:#333; font-family:'Open Sans',sans-serif; font-size:.92rem; line-height:1.7; }
 
-/* === Testimonial === */
+/* ── CTA Strip — black text on orange (9.04:1 ✓) ────────────── */
+.mfs-cta-strip {
+  background:var(--mfs-primary);
+  border-radius:12px; padding:clamp(2rem,5vw,3.5rem) 2rem; text-align:center;
+}
+.mfs-cta-strip h2 { color:var(--mfs-ink); margin-bottom:8px; }                              /* 9.04:1 ✓ */
+.mfs-cta-strip p  { color:rgba(0,0,0,.72); font-family:'Open Sans',sans-serif; margin-bottom:22px; }
+.mfs-cta-strip .mfs-btn { background:var(--mfs-ink); color:#fff; }                           /* white on black >15:1 ✓ */
+.mfs-cta-strip .mfs-btn:hover { background:#333; }
+.mfs-cta-ghost {
+  display:inline-flex; align-items:center; color:var(--mfs-ink); /* 9.04:1 ✓ */
+  font-family:'Open Sans',sans-serif; font-size:.95rem; font-weight:700;
+  padding:11px 24px; border-radius:var(--mfs-radius);
+  border:2px solid rgba(0,0,0,.45); text-decoration:none; min-height:44px;
+  transition:border-color .2s, background .2s;
+}
+.mfs-cta-ghost:hover { background:rgba(0,0,0,.1); border-color:var(--mfs-ink); }
+
+/* ── Testimonial ─────────────────────────────────────────────── */
 .mfs-testimonial {
-  background: var(--mfs-neutral); border-radius: 12px;
-  box-shadow: var(--mfs-shadow); padding: 32px 28px;
-  border-top: 4px solid var(--mfs-primary);
+  background:#fff; border-radius:10px; box-shadow:var(--mfs-shadow);
+  padding:32px 28px; border:1px solid var(--mfs-border); position:relative; overflow:hidden;
+}
+.mfs-testimonial::before {
+  content:'C'; font-family:'Rosario',serif; font-size:9rem; font-weight:700;
+  color:var(--mfs-primary); opacity:.1;
+  position:absolute; top:-10px; left:10px; line-height:1; pointer-events:none;
 }
 .mfs-testimonial blockquote {
-  font-style: italic; font-size: 1.05rem; color: #333;
-  border: none; padding: 0; margin: 0 0 16px;
+  font-family:'Open Sans',sans-serif; font-style:italic; font-size:1rem; color:#222;
+  border:none; padding:0; margin:0 0 14px; position:relative; z-index:1;
 }
-.mfs-testimonial cite { font-weight: 700; color: var(--mfs-primary); }
+.mfs-testimonial cite { font-family:'Open Sans',sans-serif; font-weight:700; color:var(--mfs-orange-text); font-style:normal; }
 
-/* === Guarantee badge === */
+/* ── Guarantee ───────────────────────────────────────────────── */
 .mfs-guarantee {
-  background: linear-gradient(135deg, #FF8C00, #FFA500);
-  border-radius: 12px; padding: 32px 28px; color: #fff; text-align: center;
+  background:linear-gradient(150deg, #9A3D00 0%, #6B2900 100%); /* white on #9A3D00 = 6.93:1 ✓ */
+  border-radius:10px; padding:32px 24px; color:#fff; text-align:center;
 }
-.mfs-guarantee .big { font-size: 2.5rem; font-weight: 900; line-height: 1; }
-.mfs-guarantee .sub { font-size: .95rem; opacity: .9; margin-top: 6px; }
+.mfs-guarantee .big { font-family:'Rosario',serif; font-size:3.2rem; font-weight:700; line-height:1; }
+.mfs-guarantee .sub { font-size:.88rem; opacity:.88; margin-top:4px; font-family:'Open Sans',sans-serif; }
 
-/* === Tip cards === */
-.mfs-tip {
-  background: var(--mfs-neutral); border-radius: 10px;
-  box-shadow: var(--mfs-shadow); padding: 22px 20px;
-  display: flex; gap: 16px; align-items: flex-start;
-}
-.mfs-tip .tip-icon { font-size: 2rem; flex-shrink: 0; }
-.mfs-tip h3 { margin: 0 0 6px; }
-.mfs-tip p { margin: 0; font-size: .92rem; color: #555; line-height: 1.6; }
+/* ── Cost cards ──────────────────────────────────────────────── */
+.mfs-cost-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:22px; }
+.mfs-cost-card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:var(--mfs-shadow); border:1px solid var(--mfs-border); text-align:center; }
+.mfs-cost-head { padding:13px 20px; font-family:'Rosario',serif; font-size:1.1rem; font-weight:700; }
+.mfs-cost-card--male   .mfs-cost-head { background:var(--mfs-primary); color:var(--mfs-ink); } /* 9.04:1 ✓ */
+.mfs-cost-card--female .mfs-cost-head { background:#1a1a1a; color:#fff; }                       /* >15:1 ✓ */
+.mfs-cost-body { padding:18px 16px; }
+.mfs-cost-price { font-family:'Rosario',serif; font-size:2.1rem; font-weight:700; line-height:1.1; margin:4px 0 14px; }
+.mfs-cost-card--male   .mfs-cost-price { color:var(--mfs-orange-text); }
+.mfs-cost-card--female .mfs-cost-price { color:#1a1a1a; }
+.mfs-cost-body ul { text-align:left; padding-left:18px; color:#444; font-size:.88rem; line-height:1.85; margin:0; font-family:'Open Sans',sans-serif; }
 
-/* === Mobile === */
-@media (max-width: 600px) {
-  .mfs-section { padding: 36px 16px; }
-  .mfs-compare td, .mfs-compare th { padding: 10px 12px; font-size: .88rem; }
-  .mfs-cta-strip { padding: 28px 20px; }
-  .mfs-hero { padding: 44px 16px 36px; }
-  .mfs-card { padding: 20px 16px; }
+/* ── Buying guide match cards ────────────────────────────────── */
+.mfs-match-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; margin-top:18px; }
+.mfs-match-card { border-radius:10px; overflow:hidden; box-shadow:var(--mfs-shadow); }
+.mfs-match-head { padding:12px 16px; font-family:'Open Sans',sans-serif; font-size:.88rem; font-weight:700; }
+.mfs-match-card:nth-child(1) .mfs-match-head { background:var(--mfs-primary); color:var(--mfs-ink); } /* 9.04:1 ✓ */
+.mfs-match-card:nth-child(2) .mfs-match-head { background:#1a1a1a; color:#fff; }                       /* >15:1 ✓ */
+.mfs-match-card:nth-child(3) .mfs-match-head { background:var(--mfs-surface); color:var(--mfs-orange-text); } /* 5.25:1 ✓ */
+.mfs-match-body { background:#fff; padding:14px 16px; }
+.mfs-match-body h3 { font-family:'Rosario',serif; font-size:.97rem; margin:0 0 5px; color:var(--mfs-ink); }
+.mfs-match-body p  { font-family:'Open Sans',sans-serif; font-size:.87rem; color:#444; margin:0; line-height:1.6; }
+
+/* ── Form ────────────────────────────────────────────────────── */
+#mfs-puppy-inquiry-form .mfs-fcard { background:#fff; border-radius:16px; box-shadow:0 8px 40px rgba(255,140,0,.14); overflow:hidden; }
+#mfs-puppy-inquiry-form .mfs-fcard-header { background:linear-gradient(135deg,#FF8C00,#e07800); padding:22px 28px; }
+#mfs-puppy-inquiry-form .mfs-fcard-header h3 { font-family:'Rosario',serif; color:var(--mfs-ink); font-size:1.4rem; margin:0 0 4px; } /* 9.04:1 ✓ */
+#mfs-puppy-inquiry-form .mfs-fcard-header p  { color:rgba(0,0,0,.65); font-size:.88rem; margin:0; font-family:'Open Sans',sans-serif; }
+#mfs-puppy-inquiry-form .mfs-fcard-body { padding:22px 28px 28px; }
+#mfs-puppy-inquiry-form .mfs-fgrid        { display:grid; grid-template-columns:1fr 1fr; gap:11px 18px; }
+#mfs-puppy-inquiry-form .mfs-fgrid.single { grid-template-columns:1fr; }
+#mfs-puppy-inquiry-form .mfs-fg           { display:flex; flex-direction:column; gap:4px; }
+#mfs-puppy-inquiry-form .mfs-fg label     { font-size:.76rem; font-weight:700; color:#444; text-transform:uppercase; letter-spacing:.4px; font-family:'Open Sans',sans-serif; }
+#mfs-puppy-inquiry-form .mfs-fg input,
+#mfs-puppy-inquiry-form .mfs-fg select,
+#mfs-puppy-inquiry-form .mfs-fg textarea  { padding:10px 13px; border:1.5px solid var(--mfs-border); border-radius:8px; font-family:inherit; font-size:.93rem; color:#222; transition:border-color .2s; background:var(--mfs-surface); }
+#mfs-puppy-inquiry-form .mfs-fg input:focus,
+#mfs-puppy-inquiry-form .mfs-fg select:focus,
+#mfs-puppy-inquiry-form .mfs-fg textarea:focus { outline:none; border-color:var(--mfs-primary); background:#fff; box-shadow:0 0 0 3px rgba(255,140,0,.15); }
+#mfs-puppy-inquiry-form .mfs-fg textarea  { resize:vertical; min-height:80px; }
+#mfs-puppy-inquiry-form .mfs-radio-row   { display:flex; flex-wrap:wrap; gap:6px 14px; margin-top:4px; }
+#mfs-puppy-inquiry-form .mfs-radio-row label { font-size:.87rem; font-weight:400; text-transform:none; letter-spacing:0; display:flex; align-items:center; gap:5px; cursor:pointer; color:#333; }
+#mfs-puppy-inquiry-form .mfs-section-label { font-size:.74rem; font-weight:700; color:var(--mfs-orange-text); text-transform:uppercase; letter-spacing:.5px; margin:16px 0 5px; border-top:1px solid var(--mfs-border); padding-top:12px; font-family:'Open Sans',sans-serif; } /* 5.25:1 ✓ */
+#mfs-puppy-inquiry-form .mfs-submit-btn  { background:var(--mfs-primary); color:var(--mfs-ink); border:none; border-radius:50px; padding:15px 40px; font-size:1rem; font-weight:700; cursor:pointer; width:100%; margin-top:18px; font-family:inherit; letter-spacing:.3px; transition:background .2s; box-shadow:0 4px 16px rgba(255,140,0,.35); min-height:48px; } /* 9.04:1 ✓ */
+#mfs-puppy-inquiry-form .mfs-submit-btn:hover { background:#d97800; }
+#mfs-puppy-inquiry-form .mfs-form-ok    { display:none; background:#e8f5e9; border:1px solid #a5d6a7; border-radius:10px; padding:18px; text-align:center; color:#2e7d32; font-weight:600; margin-top:16px; font-size:.95rem; font-family:'Open Sans',sans-serif; }
+
+/* ── Mobile ──────────────────────────────────────────────────── */
+@media(max-width:680px){
+  .mfs-section,.mfs-section-alt { padding:2rem 1rem; }
+  .mfs-hero { padding:2rem 1rem 2.5rem; }
+  .mfs-hero-inner { grid-template-columns:1fr; }
+  .mfs-hero-media { order:-1; padding-right:8px; padding-bottom:16px; }
+  .mfs-hero-img-wrap { box-shadow:8px 8px 0 var(--mfs-primary); }
+  .mfs-grid-2,.mfs-gender-pair,.mfs-cost-pair { grid-template-columns:1fr; }
+  .mfs-compare th,.mfs-compare td { padding:9px 11px; font-size:.84rem; }
+  .mfs-cta-strip { padding:2rem 1.25rem; border-radius:8px; }
+  .mfs-editorial-item { grid-template-columns:48px 1fr; gap:10px 12px; }
+  .mfs-editorial-num { font-size:2rem; }
+  #mfs-puppy-inquiry-form .mfs-fgrid { grid-template-columns:1fr; }
+  #mfs-puppy-inquiry-form .mfs-fcard-header,
+  #mfs-puppy-inquiry-form .mfs-fcard-body { padding-left:16px; padding-right:16px; }
 }
 </style>
 
 
-<!-- ── SECTION 1: HERO ─────────────────────────────────────────── -->
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 1: HERO — split layout, warm cream background
+     Photo: /wp-content/uploads/maltipoo-toy-puppies.jpg
+     ══════════════════════════════════════════════════════════════ -->
 <div class="mfs-hero">
-  <div class="mfs-container">
-    <div class="mfs-tag">🐾 MFS Expert Guide</div>
-    <h1 class="mfs-h1">Male vs Female Maltipoo:<br>Which Temperament Fits You?</h1>
-    <p class="mfs-lead">After placing thousands of puppies over 20+ years, we can confirm:<br><strong style="color:#fff">90% of gender myths are just that — myths.</strong></p>
-    <div class="mfs-trust-badges">
-      <span class="mfs-badge">🛡️ 10-Year Health Guarantee</span>
-      <span class="mfs-badge">🧠 Temperament Tested</span>
-      <span class="mfs-badge">⚕️ Spay/Neuter Guidance</span>
-      <span class="mfs-badge">🏆 20+ Years Breeding</span>
+  <div class="mfs-hero-inner">
+
+    <div>
+      <span class="mfs-hero-eyebrow">🐾 MFS Expert Guide &middot; 20+ Years &middot; 1,000s of Placements</span>
+      <h1 class="mfs-h1">Male vs Female Maltipoo:<br>Which Temperament Fits Your Family?</h1>
+      <p class="mfs-lead">After placing thousands of puppies over two decades, we can confirm:<br><strong>90% of gender myths are exactly that&thinsp;—&thinsp;myths.</strong></p>
+      <div class="mfs-trust-badges">
+        <span class="mfs-badge">&#x1F6E1;&#xFE0F; 10-Year Guarantee</span>
+        <span class="mfs-badge">&#x1F9E0; Temperament Tested</span>
+        <span class="mfs-badge">&#x2702;&#xFE0F; Spay/Neuter Guidance</span>
+        <span class="mfs-badge">&#x1F3C6; 20+ Years Breeding</span>
+      </div>
+      <div class="mfs-hero-ctas">
+        <a href="/buy-maltipoo-near-me/" class="mfs-btn">&#x1F436; Find Your Match</a>
+        <a href="#mfs-puppy-inquiry-form" class="mfs-btn-outline">Apply Now</a>
+      </div>
+      <p class="mfs-hero-note">$1,300&#x2013;$1,700 &middot; Both genders priced equally &middot; Flight Nanny nationwide</p>
     </div>
-    <a href="/buy-maltipoo-near-me/" class="mfs-btn">🐶 Find Your Perfect Match</a>
-    <p style="color:rgba(255,255,255,.7);font-size:.85rem;margin-top:14px">$1,300–$1,700 · Both genders priced equally · Flight Nanny nationwide</p>
+
+    <div class="mfs-hero-media">
+      <div class="mfs-hero-img-wrap">
+        <img
+          src="/wp-content/uploads/maltipoo-toy-puppies.jpg"
+          alt="Four apricot Toy Maltipoo puppies cuddled together, available from MaltipoosForsale.com"
+          width="600" height="450"
+          loading="eager"
+          fetchpriority="high"
+          onerror="this.src='/wp-content/uploads/apricot-maltipoo-puppy-for-sale-alph-toy-male-1300-mfs-breeder-600x600.jpg';this.onerror=null;"
+        >
+      </div>
+      <div class="mfs-hero-pill">&#x1F43E; $1,300&#x2013;$1,700</div>
+    </div>
+
   </div>
 </div>
 
 
-<!-- ── SECTION 2: KEY TAKEAWAYS ───────────────────────────────── -->
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 2: KEY TAKEAWAYS — editorial numbered list
+     Replaces generic icon+card grid (impeccable ban on repeated cards)
+     ══════════════════════════════════════════════════════════════ -->
 <div class="mfs-section">
   <div class="mfs-container">
-    <div class="mfs-tag">Quick Facts</div>
-    <h2 class="mfs-h2">The Gender Cheat Sheet — 5 Facts to End the Debate</h2>
-    <p class="mfs-lead">Before you write "Female Only" on your application, read this first.</p>
-    <div class="mfs-card-grid">
-      <div class="mfs-fact-card">
-        <div class="icon">❤️</div>
-        <strong>The "Love Slut" Theory</strong>
-        <p>Males love <em>everybody</em> — the "social butterfly" of the pair. Females bond intensely to one person: your loyal shadow.</p>
+    <span class="mfs-eyebrow">Quick Facts</span>
+    <h2 class="mfs-h2">5 Facts That End the Gender Debate</h2>
+    <p class="mfs-lead">Before you write &#x201C;Female Only&#x201D; on your application, read this first.</p>
+
+    <div class="mfs-editorial">
+      <div class="mfs-editorial-item">
+        <div class="mfs-editorial-num">01</div>
+        <div class="mfs-editorial-content">
+          <strong>The &#x201C;Love Slut&#x201D; Theory</strong>
+          <p>Males love <em>everybody</em>&#x2014;the &#x201C;social butterfly&#x201D; of the pair. Females bond intensely to one person: your loyal shadow.</p>
+        </div>
       </div>
-      <div class="mfs-fact-card">
-        <div class="icon">✂️</div>
-        <strong>Marking is Solvable</strong>
-        <p>Neutering at 6 months virtually eliminates leg-lifting. Unspayed females can mark too — it's a training issue, not a gender issue.</p>
+      <div class="mfs-editorial-item">
+        <div class="mfs-editorial-num">02</div>
+        <div class="mfs-editorial-content">
+          <strong>Marking is Solvable</strong>
+          <p>Neutering at 6 months virtually eliminates leg-lifting. Unspayed females can mark too&#x2014;it&#x2019;s a training issue, not a gender issue.</p>
+        </div>
       </div>
-      <div class="mfs-fact-card">
-        <div class="icon">👑</div>
-        <strong>The "Queen Bee" Effect</strong>
-        <p>Already have a female dog? Get a male Maltipoo. Two females often clash. Opposite-gender pairs are the safest combination.</p>
+      <div class="mfs-editorial-item">
+        <div class="mfs-editorial-num">03</div>
+        <div class="mfs-editorial-content">
+          <strong>The &#x201C;Queen Bee&#x201D; Effect</strong>
+          <p>Already have a female dog? Get a male Maltipoo. Two females often clash. Opposite-gender pairs are the safest combination.</p>
+        </div>
       </div>
-      <div class="mfs-fact-card">
-        <div class="icon">🎓</div>
-        <strong>Training Focus</strong>
-        <p>Males are food-motivated and eager to please. Females learn faster but may say "what's in it for me?" — both train beautifully.</p>
+      <div class="mfs-editorial-item">
+        <div class="mfs-editorial-num">04</div>
+        <div class="mfs-editorial-content">
+          <strong>Training Focus</strong>
+          <p>Males are food-motivated and eager to please. Females learn faster but may say &#x201C;what&#x2019;s in it for me?&#x201D;&#x2014;both train beautifully.</p>
+        </div>
       </div>
-      <div class="mfs-fact-card">
-        <div class="icon">💊</div>
-        <strong>Surgery Cost Gap</strong>
-        <p>Spaying a female costs $300–$500+ (abdominal surgery). Neutering a male is quicker and significantly cheaper. Same adoption price.</p>
+      <div class="mfs-editorial-item">
+        <div class="mfs-editorial-num">05</div>
+        <div class="mfs-editorial-content">
+          <strong>Surgery Cost Gap</strong>
+          <p>Spaying a female costs $300&#x2013;$500+ (abdominal surgery). Neutering a male is quicker and significantly cheaper. Same adoption price.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 
-<!-- ── SECTION 3–4: VISUAL PROOF + ABOUT MFS ─────────────────── -->
-<div class="mfs-section mfs-section-alt">
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 3&#x2013;4: VISUAL PROOF + ABOUT MFS
+     ══════════════════════════════════════════════════════════════ -->
+<div class="mfs-section-alt">
   <div class="mfs-container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;">
+    <div class="mfs-grid-2">
 
       <div class="mfs-card">
-        <div class="mfs-tag">Visual Proof</div>
-        <h2 class="mfs-h2" style="font-size:1.3rem">Can You Tell the Difference?</h2>
-        <p class="mfs-body">Visually, there is <strong>almost zero difference</strong> between a male and female Maltipoo. A male Toy weighs 6–9 lbs; a female 5–8 lbs — negligible.</p>
-        <p class="mfs-body">The only tell? Many owners notice males keep a softer "baby" gaze longer. Females develop a composed, alert expression sooner.</p>
-        <a href="/testimonials/" class="mfs-btn-outline" style="margin-top:8px">See Happy Families →</a>
+        <span class="mfs-eyebrow">Visual Proof</span>
+        <h2 class="mfs-h2" style="font-size:1.25rem">Can You Tell the Difference?</h2>
+        <p class="mfs-body">Visually, there is <strong>almost zero difference</strong> between a male and female Maltipoo. A male Toy weighs 6&#x2013;9 lbs; a female 5&#x2013;8 lbs&#x2014;negligible.</p>
+        <p class="mfs-body">The only tell? Many owners notice males keep a softer &#x201C;baby&#x201D; gaze longer. Females develop a composed, alert expression sooner.</p>
+        <a href="/testimonials/" class="mfs-btn-outline" aria-label="See happy MFS families and their Maltipoo puppies">See Happy Families &#x2192;</a>
       </div>
 
-      <div class="mfs-card" style="border-top:4px solid var(--mfs-primary)">
-        <div class="mfs-tag">About MFS</div>
-        <h2 class="mfs-h2" style="font-size:1.3rem">We Match Personalities,<br>Not Just Parts</h2>
-        <p class="mfs-body">At MFS, we use <strong>Volhard Puppy Aptitude Testing</strong> and <strong>Puppy Culture</strong> protocols to assess <em>every individual puppy</em> — boy or girl — before matching them to your family.</p>
-        <ul style="margin:12px 0 16px;padding-left:20px;color:#444;font-size:.95rem;line-height:1.8">
-          <li>20+ years · 1,000s of placements</li>
+      <div class="mfs-card">
+        <span class="mfs-eyebrow">About MFS</span>
+        <h2 class="mfs-h2" style="font-size:1.25rem">We Match Personalities, Not Just Parts</h2>
+        <p class="mfs-body">At MFS, we use <strong>Volhard Puppy Aptitude Testing</strong> and <strong>Puppy Culture</strong> protocols to assess <em>every individual puppy</em>&#x2014;boy or girl&#x2014;before matching them to your family.</p>
+        <ul style="margin:10px 0 16px;padding-left:18px;color:#444;font-size:.91rem;line-height:1.85;font-family:'Open Sans',sans-serif">
+          <li>20+ years &middot; 1,000s of placements</li>
           <li>Both genders priced equally</li>
           <li>Personality description for every puppy</li>
         </ul>
-        <a href="/about/" class="mfs-btn-outline">Learn Our Story →</a>
+        <a href="/about/" class="mfs-btn-outline" aria-label="Learn about our 20-year MFS breeding story">Learn Our Story &#x2192;</a>
       </div>
 
     </div>
@@ -884,77 +1000,85 @@ gtag("config", "GT-W6X7VX9N");
 </div>
 
 
-<!-- ── SECTION 5–6: BIOLOGY + MYTH-BUSTER ─────────────────────── -->
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 5&#x2013;6: BIOLOGY + MYTH-BUSTER
+     Full-band gender cards — NO border-left (impeccable absolute ban)
+     ══════════════════════════════════════════════════════════════ -->
 <div class="mfs-section">
   <div class="mfs-container">
-    <div class="mfs-tag">Section 5</div>
-    <h2 class="mfs-h2">Biological Differences — Anatomy 101</h2>
+    <span class="mfs-eyebrow">Anatomy 101</span>
+    <h2 class="mfs-h2">Biological Differences &#x2014; What Actually Changes After Surgery</h2>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px">
-      <div class="mfs-card" style="border-left:4px solid var(--mfs-primary)">
-        <h3 class="mfs-h3">♂ Male Maltipoo</h3>
-        <ul style="margin:0;padding-left:18px;color:#444;font-size:.93rem;line-height:1.8">
-          <li>Neutered at 6–9 months (required)</li>
-          <li>Quick external procedure</li>
-          <li>Fast recovery (few days)</li>
-          <li>Watch for cryptorchidism (retained testicle)</li>
-          <li>Hygiene: trim prepuce hair monthly</li>
-        </ul>
+    <div class="mfs-gender-pair">
+      <div class="mfs-gc mfs-gc--male">
+        <div class="mfs-gc-head">&#x2642;&#xFE0F; Male Maltipoo</div>
+        <div class="mfs-gc-body">
+          <ul>
+            <li>Neutered at 6&#x2013;9 months (required)</li>
+            <li>Quick external procedure</li>
+            <li>Fast recovery (few days)</li>
+            <li>Watch for cryptorchidism (retained testicle)</li>
+            <li>Hygiene: trim prepuce hair monthly</li>
+          </ul>
+        </div>
       </div>
-      <div class="mfs-card" style="border-left:4px solid #333">
-        <h3 class="mfs-h3">♀ Female Maltipoo</h3>
-        <ul style="margin:0;padding-left:18px;color:#444;font-size:.93rem;line-height:1.8">
-          <li>Spayed at 6–9 months (required by MFS)</li>
-          <li>Abdominal surgery ($300–$500+)</li>
-          <li>Longer recovery (2 weeks limited movement)</li>
-          <li>Eliminates heat, marking &amp; pyometra risk</li>
-          <li>Hygiene: "sanitary shave" for inner legs</li>
-        </ul>
+      <div class="mfs-gc mfs-gc--female">
+        <div class="mfs-gc-head">&#x2640;&#xFE0F; Female Maltipoo</div>
+        <div class="mfs-gc-body">
+          <ul>
+            <li>Spayed at 6&#x2013;9 months (required by MFS)</li>
+            <li>Abdominal surgery ($300&#x2013;$500+)</li>
+            <li>Longer recovery (2 weeks limited movement)</li>
+            <li>Eliminates heat, marking &amp; pyometra risk</li>
+            <li>Hygiene: &#x201C;sanitary shave&#x201D; for inner legs</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <!-- Myth Buster -->
     <div class="mfs-myth">
-      <div class="mfs-myth-label">⚡ Myth Busted</div>
-      <h3 class="mfs-h3">Why "Boys Mark, Girls Don't" is a Lie</h3>
-      <p class="mfs-body">Urine marking is a <strong>training issue driven by hormones</strong> — not a gender trait. Unspayed females mark territory too. Because MFS requires all puppies to be spayed/neutered before 9 months, virtually all hormonal marking is eliminated regardless of gender.</p>
-      <p style="margin:0;font-size:.92rem;color:#666">The solution is <strong>early neutering + consistent training</strong>, not choosing a different gender.</p>
+      <span class="mfs-eyebrow">&#x26A1; Myth Busted</span>
+      <h3 class="mfs-h3">Why &#x201C;Boys Mark, Girls Don&#x2019;t&#x201D; is a Lie</h3>
+      <p class="mfs-body">Urine marking is a <strong>training issue driven by hormones</strong>&#x2014;not a gender trait. Unspayed females mark territory too. Because MFS requires all puppies to be spayed/neutered before 9 months, virtually all hormonal marking is eliminated regardless of gender.</p>
+      <p style="margin:0;font-family:'Open Sans',sans-serif;font-size:.88rem;color:#555">The solution is <strong>early neutering + consistent training</strong>, not choosing a different gender.</p>
     </div>
   </div>
 </div>
 
 
-<!-- ── SECTION 7–8: WHY MFS + TRAINABILITY COMPARISON ────────── -->
-<div class="mfs-section mfs-section-alt">
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 7&#x2013;8: COMPARISON TABLE + TESTING
+     ══════════════════════════════════════════════════════════════ -->
+<div class="mfs-section-alt">
   <div class="mfs-container">
-    <div class="mfs-tag">Deep Dive Comparison</div>
-    <h2 class="mfs-h2">Trainability, Focus &amp; Personality — Side by Side</h2>
-    <p class="mfs-lead">At MFS, we test the <em>dog</em>, not the gender. Here's what we've observed across thousands of puppies:</p>
+    <span class="mfs-eyebrow">Deep Dive Comparison</span>
+    <h2 class="mfs-h2">Trainability, Focus &amp; Personality &#x2014; Side by Side</h2>
+    <p class="mfs-lead">At MFS, we test the <em>dog</em>, not the gender. Here&#x2019;s what we&#x2019;ve observed across thousands of puppies:</p>
 
     <table class="mfs-compare">
       <thead>
         <tr>
           <th>Trait</th>
-          <th>♂ Male Maltipoo</th>
-          <th>♀ Female Maltipoo</th>
+          <th>&#x2642;&#xFE0F; Male Maltipoo</th>
+          <th>&#x2640;&#xFE0F; Female Maltipoo</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Training Style</td><td>Food-motivated · eager to please · goofy</td><td>Smarter but selective · learns fast · independent</td></tr>
-        <tr><td>Affection Level</td><td>"Velcro dog" — follows you everywhere</td><td>Affectionate but self-sufficient</td></tr>
+        <tr><td>Training Style</td><td>Food-motivated &middot; eager to please &middot; goofy</td><td>Smarter but selective &middot; learns fast &middot; independent</td></tr>
+        <tr><td>Affection Level</td><td>&#x201C;Velcro dog&#x201D; &#x2014; follows you everywhere</td><td>Affectionate but self-sufficient</td></tr>
         <tr><td>Social Behaviour</td><td>Loves everyone (people, dogs, strangers)</td><td>Loyal to one person; wary of strangers</td></tr>
-        <tr><td>Forgiveness</td><td>Forgets mistakes immediately</td><td>Remembers — holds a grudge (briefly!)</td></tr>
+        <tr><td>Forgiveness</td><td>Forgets mistakes immediately</td><td>Remembers&#x2014;holds a grudge (briefly!)</td></tr>
         <tr><td>Startle Recovery</td><td>Bounces back quickly</td><td>More measured response</td></tr>
-        <tr><td>With Other Dogs</td><td>Safe with female dogs · OK with males (neutered)</td><td>Must be careful with other females</td></tr>
-        <tr><td>Adoption Wait</td><td>⚡ Often available sooner</td><td>70% of buyers choose female — longer wait</td></tr>
-        <tr><td>Neutering Cost</td><td>~$150–$250 · quick recovery</td><td>~$300–$500+ · 2-week recovery</td></tr>
+        <tr><td>With Other Dogs</td><td>Safe with female dogs &middot; OK with males (neutered)</td><td>Must be careful with other females</td></tr>
+        <tr><td>Adoption Wait</td><td>&#x26A1; Often available sooner</td><td>70% of buyers choose female&#x2014;longer wait</td></tr>
+        <tr><td>Neutering Cost</td><td>~$150&#x2013;$250 &middot; quick recovery</td><td>~$300&#x2013;$500+ &middot; 2-week recovery</td></tr>
       </tbody>
     </table>
 
-    <div class="mfs-card" style="margin-top:24px;background:#fff8f0;border:1px solid #FFD09B">
-      <h3 class="mfs-h3">🧪 How MFS Tests Every Puppy</h3>
-      <p class="mfs-body">We use <strong>Puppy Culture</strong> protocols to evaluate each puppy individually — boy or girl:</p>
-      <ul style="margin:0;padding-left:18px;color:#444;font-size:.93rem;line-height:1.9">
+    <div class="mfs-info-card">
+      <h3 class="mfs-h3">&#x1F9EA; How MFS Tests Every Puppy</h3>
+      <p class="mfs-body">We use <strong>Puppy Culture</strong> protocols to evaluate each puppy individually&#x2014;boy or girl:</p>
+      <ul style="margin:0;padding-left:18px;color:#333;font-size:.91rem;line-height:1.9;font-family:'Open Sans',sans-serif">
         <li><strong>Startle Recovery:</strong> Bounce-back after a loud sound</li>
         <li><strong>Touch Sensitivity:</strong> Enjoy being held vs. squirm</li>
         <li><strong>Prey Drive:</strong> Chase the ball or watch it</li>
@@ -965,38 +1089,46 @@ gtag("config", "GT-W6X7VX9N");
 </div>
 
 
-<!-- ── SECTION 9–10: HEALTH + PARENT IMPORTANCE ───────────────── -->
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 9&#x2013;10: HEALTH + PARENT IMPORTANCE
+     ══════════════════════════════════════════════════════════════ -->
 <div class="mfs-section">
   <div class="mfs-container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div class="mfs-grid-2">
 
       <div>
-        <div class="mfs-tag">Health &amp; Genetics</div>
-        <h2 class="mfs-h2" style="font-size:1.4rem">Gender-Specific Medical Risks</h2>
-        <div class="mfs-card" style="border-left:4px solid var(--mfs-primary);margin-top:16px">
-          <h3 class="mfs-h3">♂ Male Risks</h3>
-          <p style="font-size:.92rem;color:#444;margin:0;line-height:1.7">
-            <strong>Cryptorchidism</strong> (retained testicle) — covered under MFS health warranty.<br>
-            Slightly higher risk of prostate issues if neutered late.
-          </p>
+        <span class="mfs-eyebrow">Health &amp; Genetics</span>
+        <h2 class="mfs-h2" style="font-size:1.3rem">Gender-Specific Medical Risks</h2>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px">
+          <div class="mfs-gc mfs-gc--male">
+            <div class="mfs-gc-head">&#x2642;&#xFE0F; Male Risks</div>
+            <div class="mfs-gc-body">
+              <p style="font-size:.9rem;color:#333;margin:0;line-height:1.7;font-family:'Open Sans',sans-serif">
+                <strong>Cryptorchidism</strong> (retained testicle)&#x2014;covered under MFS health warranty.<br>
+                Slightly higher risk of prostate issues if neutered late.
+              </p>
+            </div>
+          </div>
+          <div class="mfs-gc mfs-gc--female">
+            <div class="mfs-gc-head">&#x2640;&#xFE0F; Female Risks</div>
+            <div class="mfs-gc-body">
+              <p style="font-size:.9rem;color:#333;margin:0;line-height:1.7;font-family:'Open Sans',sans-serif">
+                <strong>Pyometra</strong> (uterine infection) if unspayed&#x2014;life-threatening but 100% prevented by spaying.<br>
+                Mammary cancer risk eliminated by early spaying.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="mfs-card" style="border-left:4px solid #333;margin-top:12px">
-          <h3 class="mfs-h3">♀ Female Risks</h3>
-          <p style="font-size:.92rem;color:#444;margin:0;line-height:1.7">
-            <strong>Pyometra</strong> (uterine infection) if unspayed — life-threatening but 100% prevented by spaying.<br>
-            Mammary cancer risk eliminated by early spaying.
-          </p>
-        </div>
-        <p style="margin-top:12px;font-size:.85rem;color:#666">Both genders equally covered by our <a href="/puppy-health-warranty" style="color:var(--mfs-primary)">10-Year Health Guarantee</a>.</p>
+        <p class="mfs-notice">Both genders equally covered by our <a href="/puppy-health-warranty" style="color:var(--mfs-orange-text)">10-Year Health Guarantee</a>.</p>
       </div>
 
       <div>
-        <div class="mfs-tag">Breeder Secret</div>
-        <h2 class="mfs-h2" style="font-size:1.4rem">Mom Matters More Than Gender</h2>
+        <span class="mfs-eyebrow">Breeder Secret</span>
+        <h2 class="mfs-h2" style="font-size:1.3rem">Mom Matters More Than Gender</h2>
         <div class="mfs-card" style="margin-top:16px">
-          <p class="mfs-body" style="margin-bottom:12px">A puppy's personality is <strong>50% genetics + 50% maternal influence</strong>. The temperament of the <em>mother</em> predicts your puppy's character more accurately than gender ever could.</p>
-          <p class="mfs-body">A calm, confident mother produces calm, confident puppies — male or female. That's why MFS shows you our parent dogs and their health records before you commit.</p>
-          <a href="/about/" class="mfs-btn-outline" style="font-size:.9rem">Meet Our Parent Dogs →</a>
+          <p class="mfs-body">A puppy&#x2019;s personality is <strong>50% genetics + 50% maternal influence</strong>. The temperament of the <em>mother</em> predicts your puppy&#x2019;s character more accurately than gender ever could.</p>
+          <p class="mfs-body">A calm, confident mother produces calm, confident puppies&#x2014;male or female. That&#x2019;s why MFS shows you our parent dogs and their health records before you commit.</p>
+          <a href="/about/" class="mfs-btn-outline" style="font-size:.88rem" aria-label="Meet our Maltipoo parent dogs">Meet Our Parent Dogs &#x2192;</a>
         </div>
       </div>
 
@@ -1005,44 +1137,50 @@ gtag("config", "GT-W6X7VX9N");
 </div>
 
 
-<!-- ── CTA STRIP ───────────────────────────────────────────────── -->
-<div class="mfs-section" style="padding-top:0;padding-bottom:0">
+<!-- ══════════════════════════════════════════════════════════════
+     CTA STRIP &#x2014; black text on orange (9.04:1 WCAG AAA ✓)
+     ══════════════════════════════════════════════════════════════ -->
+<div class="mfs-section" style="padding-top:0;padding-bottom:0;padding-left:1.25rem;padding-right:1.25rem">
   <div class="mfs-container">
     <div class="mfs-cta-strip">
-      <h2 class="mfs-h2" style="color:#fff">Ready to Find Your Perfect Match?</h2>
-      <p>Stop searching by gender. Tell us about your lifestyle and we'll match you with the <em>right individual puppy</em> — boy or girl.</p>
-      <a href="/buy-maltipoo-near-me/" class="mfs-btn" style="margin-right:12px;margin-bottom:10px">🐶 View Available Puppies</a>
-      <a href="/contact-2/" class="mfs-btn" style="background:rgba(255,255,255,.2);color:#fff;border:2px solid rgba(255,255,255,.6)">💬 Ask a Question</a>
+      <h2 class="mfs-h2">Ready to Find Your Perfect Match?</h2>
+      <p>Stop searching by gender. Tell us about your lifestyle and we&#x2019;ll match you with the <em>right individual puppy</em>&#x2014;boy or girl.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+        <a href="/buy-maltipoo-near-me/" class="mfs-btn">&#x1F436; View Available Puppies</a>
+        <a href="/contact-2/" class="mfs-cta-ghost">&#x1F4AC; Ask a Question</a>
+      </div>
     </div>
   </div>
 </div>
 
 
-<!-- ── SECTION 11–12: HEALTH GUARANTEE + WAITLIST HACK ────────── -->
-<div class="mfs-section mfs-section-alt">
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 11&#x2013;12: GUARANTEE + WAITLIST HACK
+     ══════════════════════════════════════════════════════════════ -->
+<div class="mfs-section-alt">
   <div class="mfs-container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start">
+    <div class="mfs-grid-2">
 
       <div class="mfs-guarantee">
-        <div style="font-size:2.2rem;margin-bottom:4px">🛡️</div>
+        <div style="font-size:2rem;margin-bottom:4px">&#x1F6E1;&#xFE0F;</div>
         <div class="big">10-Year</div>
         <div class="sub">Health Guarantee</div>
-        <p style="margin:16px 0 0;font-size:.92rem;opacity:.9">Our warranty covers both genders equally — heart, genetic, and structural defects. No gender exclusions, ever.</p>
-        <a href="/puppy-health-warranty" style="display:inline-block;margin-top:16px;color:#fff;font-weight:700;text-decoration:underline;font-size:.9rem">Read the Full Warranty →</a>
+        <p style="margin:14px 0 0;font-size:.88rem;opacity:.92;font-family:'Open Sans',sans-serif">Our warranty covers both genders equally&#x2014;heart, genetic, and structural defects. No gender exclusions, ever.</p>
+        <a href="/puppy-health-warranty" style="display:inline-block;margin-top:14px;color:#fff;font-weight:700;text-decoration:underline;font-size:.86rem;font-family:'Open Sans',sans-serif">Read the Full Warranty &#x2192;</a>
       </div>
 
       <div class="mfs-card">
-        <div class="mfs-tag">⚡ Industry Secret</div>
-        <h2 class="mfs-h2" style="font-size:1.3rem">The "Waitlist Hack" — Be Open to a Boy</h2>
-        <p class="mfs-body"><strong>70% of buyers request females.</strong> This creates a 4–6 month bottleneck for female puppies.</p>
-        <p class="mfs-body">If you're open to a male Maltipoo, you may receive your puppy in <strong>weeks instead of months</strong> — at the exact same price.</p>
-        <ul style="margin:0;padding-left:18px;color:#444;font-size:.9rem;line-height:1.9">
-          <li>Same price: $1,300–$1,700</li>
+        <span class="mfs-eyebrow">&#x26A1; Industry Secret</span>
+        <h2 class="mfs-h2" style="font-size:1.2rem">The &#x201C;Waitlist Hack&#x201D; &#x2014; Be Open to a Boy</h2>
+        <p class="mfs-body"><strong>70% of buyers request females.</strong> This creates a 4&#x2013;6 month bottleneck for female puppies.</p>
+        <p class="mfs-body">If you&#x2019;re open to a male Maltipoo, you may receive your puppy in <strong>weeks instead of months</strong>&#x2014;at the exact same price.</p>
+        <ul style="margin:0;padding-left:18px;color:#444;font-size:.88rem;line-height:1.9;font-family:'Open Sans',sans-serif">
+          <li>Same price: $1,300&#x2013;$1,700</li>
           <li>Same 10-year health guarantee</li>
           <li>Same temperament testing</li>
-          <li>Faster placement — less waiting</li>
+          <li>Faster placement &#x2014; less waiting</li>
         </ul>
-        <a href="/our-process/" class="mfs-btn-outline" style="margin-top:16px;display:inline-block">Our Process →</a>
+        <a href="/our-process/" class="mfs-btn-outline" style="margin-top:16px">Our Process &#x2192;</a>
       </div>
 
     </div>
@@ -1050,56 +1188,62 @@ gtag("config", "GT-W6X7VX9N");
 </div>
 
 
-<!-- ── SECTION 13: COST COMPARISON ───────────────────────────── -->
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 13: COST COMPARISON &#x2014; full-band cards (no border-top stripe)
+     ══════════════════════════════════════════════════════════════ -->
 <div class="mfs-section">
   <div class="mfs-container">
-    <div class="mfs-tag">Section 13 · Cost &amp; Value</div>
-    <h2 class="mfs-h2">The Surgery Price Gap — Males Are Cheaper to Own</h2>
-    <p class="mfs-lead">Both genders have the same adoption fee. The real cost difference shows up in Year 1 at the vet.</p>
+    <span class="mfs-eyebrow">Cost &amp; Value</span>
+    <h2 class="mfs-h2">The Surgery Price Gap &#x2014; Males Are Cheaper to Own in Year 1</h2>
+    <p class="mfs-lead">Both genders have the same adoption fee. The real cost difference shows up at the vet.</p>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px">
-      <div class="mfs-card" style="border-top:4px solid var(--mfs-primary);text-align:center">
-        <div style="font-size:1.8rem;margin-bottom:8px">♂</div>
-        <h3 class="mfs-h3">Neutering (Male)</h3>
-        <div style="font-size:2rem;font-weight:900;color:var(--mfs-primary);margin:10px 0">$150–$250</div>
-        <ul style="text-align:left;padding-left:18px;color:#444;font-size:.9rem;line-height:1.8;margin:0">
-          <li>External procedure</li>
-          <li>Short anesthesia time</li>
-          <li>Recovery: 2–3 days</li>
-          <li>Back to normal quickly</li>
-        </ul>
+    <div class="mfs-cost-pair">
+      <div class="mfs-cost-card mfs-cost-card--male">
+        <div class="mfs-cost-head">&#x2642;&#xFE0F; Neutering &#x2014; Male</div>
+        <div class="mfs-cost-body">
+          <div class="mfs-cost-price">$150&#x2013;$250</div>
+          <ul>
+            <li>External procedure</li>
+            <li>Short anesthesia time</li>
+            <li>Recovery: 2&#x2013;3 days</li>
+            <li>Back to normal quickly</li>
+          </ul>
+        </div>
       </div>
-      <div class="mfs-card" style="border-top:4px solid #333;text-align:center">
-        <div style="font-size:1.8rem;margin-bottom:8px">♀</div>
-        <h3 class="mfs-h3">Spaying (Female)</h3>
-        <div style="font-size:2rem;font-weight:900;color:#333;margin:10px 0">$300–$500+</div>
-        <ul style="text-align:left;padding-left:18px;color:#444;font-size:.9rem;line-height:1.8;margin:0">
-          <li>Abdominal surgery</li>
-          <li>Longer anesthesia</li>
-          <li>Recovery: 10–14 days</li>
-          <li>Strict movement restriction</li>
-        </ul>
+      <div class="mfs-cost-card mfs-cost-card--female">
+        <div class="mfs-cost-head">&#x2640;&#xFE0F; Spaying &#x2014; Female</div>
+        <div class="mfs-cost-body">
+          <div class="mfs-cost-price">$300&#x2013;$500+</div>
+          <ul>
+            <li>Abdominal surgery</li>
+            <li>Longer anesthesia</li>
+            <li>Recovery: 10&#x2013;14 days</li>
+            <li>Strict movement restriction</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <p style="margin-top:16px;font-size:.88rem;color:#666;text-align:center">Prices vary by location and clinic. MFS provides a recommended vet list after adoption.</p>
+    <p style="margin-top:12px;font-size:.84rem;color:#666;text-align:center;font-family:'Open Sans',sans-serif">Prices vary by location and clinic. MFS provides a recommended vet list after adoption.</p>
   </div>
 </div>
 
 
-<!-- ── SECTION 14: FAQ ─────────────────────────────────────────── -->
-<div class="mfs-section mfs-section-alt">
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 14: FAQ
+     ══════════════════════════════════════════════════════════════ -->
+<div class="mfs-section-alt">
   <div class="mfs-container">
-    <div class="mfs-tag">Section 14 · FAQ</div>
-    <h2 class="mfs-h2">Behavior &amp; Habits — Your Questions Answered</h2>
+    <span class="mfs-eyebrow">Behavior &amp; Habits</span>
+    <h2 class="mfs-h2">Your Questions Answered</h2>
 
-    <div class="mfs-faq" style="margin-top:24px">
+    <div class="mfs-faq" style="margin-top:22px">
       <details>
         <summary>Do male dogs hump everything?</summary>
-        <p>Humping is driven by excitement or hormones — not exclusively males. Females do it too. Neutering before 9 months (which MFS requires) significantly reduces this behavior. Consistent "off" command training handles the rest.</p>
+        <p>Humping is driven by excitement or hormones&#x2014;not exclusively males. Females do it too. Neutering before 9 months (which MFS requires) significantly reduces this behavior. Consistent &#x201C;off&#x201D; command training handles the rest.</p>
       </details>
       <details>
         <summary>I have a female dog. Should I get a male Maltipoo?</summary>
-        <p>Yes — strongly recommended. Opposite-gender pairings are statistically the safest, least conflict-prone combination. Two females in the same house frequently develop hierarchy conflicts (known as "bitch fights" in veterinary literature) that can be intense and difficult to manage.</p>
+        <p>Yes&#x2014;strongly recommended. Opposite-gender pairings are statistically the safest, least conflict-prone combination. Two females in the same house frequently develop hierarchy conflicts that can be intense and difficult to manage.</p>
       </details>
       <details>
         <summary>Are female Maltipoos cleaner?</summary>
@@ -1107,145 +1251,158 @@ gtag("config", "GT-W6X7VX9N");
       </details>
       <details>
         <summary>Do male Maltipoos smell worse?</summary>
-        <p>No. Intact males can develop a "doggy" odor from testosterone, but neutered males have no distinguishable smell difference from females. Both benefit from regular baths (every 3–4 weeks) and ear cleaning.</p>
+        <p>No. Intact males can develop a &#x201C;doggy&#x201D; odor from testosterone, but neutered males have no distinguishable smell difference from females. Both benefit from regular baths (every 3&#x2013;4 weeks) and ear cleaning.</p>
       </details>
       <details>
         <summary>Which gender is easier to housebreak?</summary>
-        <p>Both genders housebreak in the same timeframe with consistent crate training (typically 2–4 weeks). Some trainers note males are slightly more easily distracted outdoors, but early neutering and routine schedules make the difference negligible.</p>
+        <p>Both genders housebreak in the same timeframe with consistent crate training (typically 2&#x2013;4 weeks). Some trainers note males are slightly more easily distracted outdoors, but early neutering and routine schedules make the difference negligible.</p>
       </details>
       <details>
         <summary>Is a male or female Maltipoo better for a senior owner?</summary>
-        <p>Males are often preferred by seniors because of their "Velcro" nature — they stay close, crave cuddles, and are less likely to wander. But an individual female with a calm mother can be equally perfect. Ask MFS to match you based on your lifestyle.</p>
+        <p>Males are often preferred by seniors because of their &#x201C;Velcro&#x201D; nature&#x2014;they stay close, crave cuddles, and are less likely to wander. But an individual female with a calm mother can be equally perfect. Ask MFS to match you based on your lifestyle.</p>
       </details>
     </div>
   </div>
 </div>
 
 
-<!-- ── SECTION 15–16: CASE STUDY + BUYING GUIDE ──────────────── -->
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 15&#x2013;16: CASE STUDY + BUYING GUIDE
+     ══════════════════════════════════════════════════════════════ -->
 <div class="mfs-section">
   <div class="mfs-container">
 
-    <!-- Case Study -->
-    <div class="mfs-tag">Case Study</div>
-    <h2 class="mfs-h2">The Thompson Family's "Gender Swap" Success</h2>
-    <div class="mfs-testimonial" style="margin:20px 0 36px">
+    <span class="mfs-eyebrow">Case Study</span>
+    <h2 class="mfs-h2">The Thompson Family&#x2019;s &#x201C;Gender Swap&#x201D; Success</h2>
+    <div class="mfs-testimonial" style="margin:18px 0 36px">
       <blockquote>
-        "We had our heart set on a female for months. MFS showed us Charlie — a male Toy Maltipoo with the gentlest, most cuddly temperament we'd ever seen. We said yes on the spot. Two years later, Charlie is the king of the house. We tell everyone: be open to a boy."
+        &#x201C;We had our heart set on a female for months. MFS showed us Charlie&#x2014;a male Toy Maltipoo with the gentlest, most cuddly temperament we&#x2019;d ever seen. We said yes on the spot. Two years later, Charlie is the king of the house. We tell everyone: be open to a boy.&#x201D;
       </blockquote>
-      <cite>— The Thompson Family, Ohio</cite>
-      <p style="margin:12px 0 0;font-size:.88rem;color:#666">Wait time: <strong>3 weeks</strong> (vs. 5 months if they'd insisted on female)</p>
+      <cite>&#x2014; The Thompson Family, Ohio</cite>
+      <p style="margin:10px 0 0;font-size:.84rem;color:#666;font-family:'Open Sans',sans-serif">Wait time: <strong>3 weeks</strong> (vs. 5 months if they&#x2019;d insisted on female)</p>
     </div>
 
-    <!-- Buying Guide -->
-    <div class="mfs-tag">Buying Guide</div>
+    <span class="mfs-eyebrow">Buying Guide</span>
     <h2 class="mfs-h2">Matching Gender to Your Household</h2>
-    <p class="mfs-lead">The most critical factor isn't <em>your</em> preference — it's your <em>current dog's</em> preference.</p>
+    <p class="mfs-lead">The most critical factor isn&#x2019;t <em>your</em> preference&#x2014;it&#x2019;s your <em>current dog&#x2019;s</em> preference.</p>
 
-    <div class="mfs-card-grid" style="margin-top:20px">
-      <div class="mfs-card" style="border-top:4px solid var(--mfs-primary)">
-        <div style="font-size:1.4rem;margin-bottom:8px">🐕 Have a female dog?</div>
-        <h3 class="mfs-h3" style="color:var(--mfs-primary)">Get a Male</h3>
-        <p class="mfs-body">Opposite-gender pairings are consistently the most harmonious. Two females frequently develop serious hierarchy conflicts.</p>
+    <div class="mfs-match-grid">
+      <div class="mfs-match-card">
+        <div class="mfs-match-head">&#x1F415; You have a female dog</div>
+        <div class="mfs-match-body">
+          <h3>Get a Male</h3>
+          <p>Opposite-gender pairings are consistently the most harmonious. Two females frequently develop serious hierarchy conflicts.</p>
+        </div>
       </div>
-      <div class="mfs-card" style="border-top:4px solid #333">
-        <div style="font-size:1.4rem;margin-bottom:8px">🐕 Have a male dog?</div>
-        <h3 class="mfs-h3">Get a Female</h3>
-        <p class="mfs-body">Two neutered males can coexist, but opposite gender is still safest. A female Maltipoo blends seamlessly into male-dog households.</p>
+      <div class="mfs-match-card">
+        <div class="mfs-match-head">&#x1F415; You have a male dog</div>
+        <div class="mfs-match-body">
+          <h3>Get a Female</h3>
+          <p>Two neutered males can coexist, but opposite gender is still safest. A female Maltipoo blends seamlessly into male-dog households.</p>
+        </div>
       </div>
-      <div class="mfs-card" style="border-top:4px solid #28a745">
-        <div style="font-size:1.4rem;margin-bottom:8px">🏠 No other dogs?</div>
-        <h3 class="mfs-h3" style="color:#28a745">You Choose!</h3>
-        <p class="mfs-body">With no existing dog dynamics to consider, let personality — not gender — guide you. MFS will match you to the right individual.</p>
+      <div class="mfs-match-card">
+        <div class="mfs-match-head">&#x1F3E0; No other dogs</div>
+        <div class="mfs-match-body">
+          <h3>You Choose!</h3>
+          <p>With no existing dog dynamics to consider, let personality&#x2014;not gender&#x2014;guide you. MFS will match you to the right individual.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 
-<!-- ── SECTION 17: FINAL CTA ───────────────────────────────────── -->
-<div class="mfs-section mfs-section-alt">
-  <div class="mfs-container">
-    <div class="mfs-tag">🎯 Don't Let Stereotypes Decide</div>
-    <h2 class="mfs-h2" style="text-align:center">The Best Dog is the <em>Right</em> Dog</h2>
-    <p class="mfs-lead" style="text-align:center">If you're still stuck on "I need a girl," ask yourself why. Is it a name? A bow? A feeling? At MFS, we promise you: <strong>the right puppy will choose you</strong> — regardless of gender.</p>
-
-    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px">
-      <a href="/buy-maltipoo-near-me/" class="mfs-btn">🐶 View Available Puppies</a>
-      <a href="/contact-2/" class="mfs-btn-outline">💬 Talk to Our Team</a>
-      <a href="/our-process/" class="mfs-btn-outline">📋 Our Adoption Process</a>
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 17: FINAL CTA
+     ══════════════════════════════════════════════════════════════ -->
+<div class="mfs-section-alt">
+  <div class="mfs-container" style="text-align:center">
+    <span class="mfs-eyebrow">Don&#x2019;t Let Stereotypes Decide</span>
+    <h2 class="mfs-h2">The Best Dog is the <em>Right</em> Dog</h2>
+    <p class="mfs-lead" style="max-width:600px;margin:0 auto 26px">If you&#x2019;re still stuck on &#x201C;I need a girl,&#x201D; ask yourself why. Is it a name? A bow? A feeling? At MFS, we promise you: <strong>the right puppy will choose you</strong>&#x2014;regardless of gender.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
+      <a href="/buy-maltipoo-near-me/" class="mfs-btn">&#x1F436; View Available Puppies</a>
+      <a href="/contact-2/" class="mfs-btn-outline" aria-label="Talk to our Maltipoo team">&#x1F4AC; Talk to Our Team</a>
+      <a href="/our-process/" class="mfs-btn-outline" aria-label="Read our Maltipoo adoption process">&#x1F4CB; Our Adoption Process</a>
     </div>
   </div>
 </div>
 
 
-<!-- ── SECTION 18–19: REACH + BREED COMPARISON ───────────────── -->
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 18&#x2013;19: REACH + BREED CONTEXT
+     ══════════════════════════════════════════════════════════════ -->
 <div class="mfs-section">
   <div class="mfs-container">
+    <div class="mfs-grid-2">
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
       <div>
-        <div class="mfs-tag">Section 18 · National Reach</div>
-        <h2 class="mfs-h2" style="font-size:1.3rem">We Deliver Temperament Nationwide</h2>
-        <p class="mfs-body">MFS places puppies — both genders — across all 50 states via our safe Flight Nanny service. No extra charge for airport delivery.</p>
-        <ul style="margin:12px 0;padding-left:18px;color:#444;font-size:.9rem;line-height:1.9">
-          <li><a href="/usa-locations/maltipoo-puppies-arizona/" style="color:var(--mfs-primary)">Arizona</a> · <a href="/usa-locations/maltipoo-puppies-california/" style="color:var(--mfs-primary)">California</a> · <a href="/usa-locations/maltipoo-puppies-florida/" style="color:var(--mfs-primary)">Florida</a></li>
-          <li><a href="/usa-locations/maltipoo-puppies-texas/" style="color:var(--mfs-primary)">Texas</a> · <a href="/usa-locations/maltipoo-puppies-new-york/" style="color:var(--mfs-primary)">New York</a> · <a href="/usa-locations/maltipoo-puppies-ohio/" style="color:var(--mfs-primary)">Ohio</a></li>
-          <li>All 50 states · Flight Nanny at no extra cost</li>
+        <span class="mfs-eyebrow">National Reach</span>
+        <h2 class="mfs-h2" style="font-size:1.25rem">We Deliver Temperament Nationwide</h2>
+        <p class="mfs-body">MFS places puppies&#x2014;both genders&#x2014;across all 50 states via our safe Flight Nanny service. No extra charge for airport delivery.</p>
+        <ul style="margin:10px 0;padding-left:18px;color:#444;font-size:.88rem;line-height:1.9;font-family:'Open Sans',sans-serif">
+          <li><a href="/usa-locations/maltipoo-puppies-arizona/" style="color:var(--mfs-orange-text)">Arizona</a> &middot; <a href="/usa-locations/maltipoo-puppies-california/" style="color:var(--mfs-orange-text)">California</a> &middot; <a href="/usa-locations/maltipoo-puppies-florida/" style="color:var(--mfs-orange-text)">Florida</a></li>
+          <li><a href="/usa-locations/maltipoo-puppies-texas/" style="color:var(--mfs-orange-text)">Texas</a> &middot; <a href="/usa-locations/maltipoo-puppies-new-york/" style="color:var(--mfs-orange-text)">New York</a> &middot; <a href="/usa-locations/maltipoo-puppies-ohio/" style="color:var(--mfs-orange-text)">Ohio</a></li>
+          <li>All 50 states &middot; Flight Nanny at no extra cost</li>
         </ul>
-        <a href="/shipping-delivery/" class="mfs-btn-outline" style="font-size:.9rem">Delivery Info →</a>
+        <a href="/shipping-delivery/" class="mfs-btn-outline" style="font-size:.88rem" aria-label="Learn about Maltipoo delivery and shipping options">Delivery Info &#x2192;</a>
       </div>
 
       <div>
-        <div class="mfs-tag">Section 19 · Breed Context</div>
-        <h2 class="mfs-h2" style="font-size:1.3rem">Gender in Small Hybrid Breeds</h2>
+        <span class="mfs-eyebrow">Breed Context</span>
+        <h2 class="mfs-h2" style="font-size:1.25rem">Gender in Small Hybrid Breeds</h2>
         <p class="mfs-body">Gender differences are <em>most exaggerated</em> in large working breeds. In small hybrids like the Maltipoo, the difference narrows dramatically:</p>
-        <table style="width:100%;border-collapse:collapse;font-size:.88rem;margin-top:12px">
+        <table style="width:100%;border-collapse:collapse;font-size:.86rem;margin-top:12px;font-family:'Open Sans',sans-serif">
           <tr style="background:var(--mfs-surface)">
-            <th style="padding:8px 12px;text-align:left;border:1px solid var(--mfs-border)">Breed</th>
-            <th style="padding:8px 12px;text-align:left;border:1px solid var(--mfs-border)">Gender Impact</th>
+            <th style="padding:9px 12px;text-align:left;border:1px solid var(--mfs-border)">Breed</th>
+            <th style="padding:9px 12px;text-align:left;border:1px solid var(--mfs-border)">Gender Impact</th>
           </tr>
-          <tr><td style="padding:8px 12px;border:1px solid var(--mfs-border)">Rottweiler</td><td style="padding:8px 12px;border:1px solid var(--mfs-border)">Very high (size/strength)</td></tr>
-          <tr><td style="padding:8px 12px;border:1px solid var(--mfs-border)">Cockapoo</td><td style="padding:8px 12px;border:1px solid var(--mfs-border)">Moderate</td></tr>
-          <tr><td style="padding:8px 12px;border:1px solid var(--mfs-border)">Maltipoo</td><td style="padding:8px 12px;border:1px solid var(--mfs-border);color:var(--mfs-primary);font-weight:700">Low — nearly identical</td></tr>
+          <tr><td style="padding:9px 12px;border:1px solid var(--mfs-border)">Rottweiler</td><td style="padding:9px 12px;border:1px solid var(--mfs-border)">Very high (size/strength)</td></tr>
+          <tr><td style="padding:9px 12px;border:1px solid var(--mfs-border)">Cockapoo</td><td style="padding:9px 12px;border:1px solid var(--mfs-border)">Moderate</td></tr>
+          <tr><td style="padding:9px 12px;border:1px solid var(--mfs-border);color:var(--mfs-orange-text);font-weight:700">Maltipoo</td><td style="padding:9px 12px;border:1px solid var(--mfs-border);color:var(--mfs-orange-text);font-weight:700">Low &#x2014; nearly identical</td></tr>
         </table>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
 
 
-<!-- ── SECTION 20–21: VELCRO + ETHICS ────────────────────────── -->
-<div class="mfs-section mfs-section-alt">
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 20&#x2013;21: VELCRO FACTOR + ETHICS
+     ══════════════════════════════════════════════════════════════ -->
+<div class="mfs-section-alt">
   <div class="mfs-container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div class="mfs-grid-2">
 
       <div class="mfs-card">
-        <div class="mfs-tag">The Velcro Factor</div>
-        <h2 class="mfs-h2" style="font-size:1.3rem">Who Wants to Cuddle More?</h2>
-        <div class="mfs-tip" style="margin-top:16px;padding:16px;background:var(--mfs-surface);box-shadow:none">
-          <div class="tip-icon">♂</div>
-          <div><h3 class="mfs-h3">"I love you, I love you, I love you!"</h3><p>Males follow you everywhere — bathroom included. The ultimate Velcro dog. Ideal for people who want constant companionship.</p></div>
-        </div>
-        <div class="mfs-tip" style="margin-top:12px;padding:16px;background:var(--mfs-surface);box-shadow:none">
-          <div class="tip-icon">♀</div>
-          <div><h3 class="mfs-h3">"Love me, then leave me be."</h3><p>Females are affectionate on their terms — cuddles then independence. Perfect for owners who value a dog with her own personality.</p></div>
+        <span class="mfs-eyebrow">The Velcro Factor</span>
+        <h2 class="mfs-h2" style="font-size:1.2rem">Who Wants to Cuddle More?</h2>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
+          <div class="mfs-tip">
+            <div class="mfs-tip-icon">&#x2642;&#xFE0F;</div>
+            <div><h3 class="mfs-h3">&#x201C;I love you, I love you, I love you!&#x201D;</h3><p>Males follow you everywhere&#x2014;bathroom included. The ultimate Velcro dog. Ideal for people who want constant companionship.</p></div>
+          </div>
+          <div class="mfs-tip">
+            <div class="mfs-tip-icon">&#x2640;&#xFE0F;</div>
+            <div><h3 class="mfs-h3">&#x201C;Love me, then leave me be.&#x201D;</h3><p>Females are affectionate on their terms&#x2014;cuddles then independence. Perfect for owners who value a dog with her own personality.</p></div>
+          </div>
         </div>
       </div>
 
       <div class="mfs-card">
-        <div class="mfs-tag">Our Ethics</div>
-        <h2 class="mfs-h2" style="font-size:1.3rem">The Spay/Neuter Contract — Why It Matters</h2>
-        <p class="mfs-body">All MFS puppies — male and female — are sold on a <strong>strict Spay/Neuter Contract</strong>. We don't sell breeding rights. Ever.</p>
-        <ul style="margin:12px 0;padding-left:18px;color:#444;font-size:.93rem;line-height:1.9">
-          <li>✅ No marking (hormones eliminated)</li>
-          <li>✅ No heat cycles or bloody discharge</li>
-          <li>✅ No accidental pregnancies</li>
-          <li>✅ Longer, healthier life for your puppy</li>
-          <li>✅ Reduced cancer and infection risk</li>
+        <span class="mfs-eyebrow">Our Ethics</span>
+        <h2 class="mfs-h2" style="font-size:1.2rem">The Spay/Neuter Contract &#x2014; Why It Matters</h2>
+        <p class="mfs-body">All MFS puppies&#x2014;male and female&#x2014;are sold on a <strong>strict Spay/Neuter Contract</strong>. We don&#x2019;t sell breeding rights. Ever.</p>
+        <ul style="margin:10px 0;padding-left:18px;color:#333;font-size:.91rem;line-height:1.9;font-family:'Open Sans',sans-serif">
+          <li>&#x2705; No marking (hormones eliminated)</li>
+          <li>&#x2705; No heat cycles or bloody discharge</li>
+          <li>&#x2705; No accidental pregnancies</li>
+          <li>&#x2705; Longer, healthier life for your puppy</li>
+          <li>&#x2705; Reduced cancer and infection risk</li>
         </ul>
-        <a href="/about/" class="mfs-btn-outline" style="font-size:.9rem">Our Breeding Ethics →</a>
+        <a href="/about/" class="mfs-btn-outline" style="font-size:.88rem" aria-label="Read about MFS breeding ethics">Our Breeding Ethics &#x2192;</a>
       </div>
 
     </div>
@@ -1253,156 +1410,137 @@ gtag("config", "GT-W6X7VX9N");
 </div>
 
 
-<!-- ── SECTION 22: CARE TIPS ──────────────────────────────────── -->
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 22: CARE TIPS
+     ══════════════════════════════════════════════════════════════ -->
 <div class="mfs-section">
   <div class="mfs-container">
-    <div class="mfs-tag">Section 22 · Care &amp; Hygiene</div>
-    <h2 class="mfs-h2">Keeping Them Clean — Hygiene Tips for Him &amp; Her</h2>
-    <p class="mfs-lead">The Maltipoo's fluffy coat is beautiful — but requires attention in the sanitary areas.</p>
+    <span class="mfs-eyebrow">Care &amp; Hygiene</span>
+    <h2 class="mfs-h2">Keeping Them Clean &#x2014; Grooming Tips for Him &amp; Her</h2>
+    <p class="mfs-lead">The Maltipoo&#x2019;s fluffy coat is beautiful&#x2014;but requires attention in the sanitary areas.</p>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px">
+    <div class="mfs-grid-2" style="margin-top:20px">
       <div class="mfs-tip">
-        <div class="tip-icon">✂️</div>
+        <div class="mfs-tip-icon">&#x2702;&#xFE0F;</div>
         <div>
-          <h3 class="mfs-h3">For Him — The Sanitary Trim</h3>
-          <p>Keep hair on the prepuce (sheath) trimmed short monthly. "Wicking" occurs when long hair draws urine up the shaft, causing skin irritation. A professional groomer handles this in minutes.</p>
+          <h3 class="mfs-h3">For Him &#x2014; The Sanitary Trim</h3>
+          <p>Keep hair on the prepuce (sheath) trimmed short monthly. &#x201C;Wicking&#x201D; occurs when long hair draws urine up the shaft, causing skin irritation. A professional groomer handles this in minutes.</p>
         </div>
       </div>
       <div class="mfs-tip">
-        <div class="tip-icon">🚿</div>
+        <div class="mfs-tip-icon">&#x1F6BF;</div>
         <div>
-          <h3 class="mfs-h3">For Her — The Hygiene Clip</h3>
-          <p>Females squat low. Long inner-leg hair gets wet during urination and mats quickly. Ask your groomer for a "Sanitary Shave" or "Hygiene Clip" every 6–8 weeks to prevent irritation and odor.</p>
+          <h3 class="mfs-h3">For Her &#x2014; The Hygiene Clip</h3>
+          <p>Females squat low. Long inner-leg hair gets wet during urination and mats quickly. Ask your groomer for a &#x201C;Sanitary Shave&#x201D; every 6&#x2013;8 weeks to prevent irritation and odor.</p>
         </div>
       </div>
     </div>
 
-    <div class="mfs-card" style="margin-top:24px;background:#fff8f0;border:1px solid #FFD09B">
-      <p style="margin:0;font-size:.92rem;color:#444"><strong>💡 Grooming Tip:</strong> Both genders benefit from a full professional groom every 6–8 weeks. Ask for the "puppy cut" to keep maintenance manageable. <a href="/how-to-groom-a-maltese/" style="color:var(--mfs-primary)">See our full grooming guide →</a></p>
+    <div class="mfs-info-card" style="margin-top:20px">
+      <p style="margin:0;font-family:'Open Sans',sans-serif;font-size:.9rem;color:#333"><strong>&#x1F4A1; Grooming Tip:</strong> Both genders benefit from a full professional groom every 6&#x2013;8 weeks. Ask for the &#x201C;puppy cut&#x201D; to keep maintenance manageable. <a href="/how-to-groom-a-maltese/" style="color:var(--mfs-orange-text)">See our full grooming guide &#x2192;</a></p>
     </div>
   </div>
 </div>
 
 
-<!-- ── FINAL FORM + CTA ────────────────────────────────────────── -->
-<div class="mfs-section mfs-section-alt">
+<!-- ══════════════════════════════════════════════════════════════
+     FINAL FORM + CTA
+     Accessibility fixes: all inputs have id + label[for]
+     ══════════════════════════════════════════════════════════════ -->
+<div class="mfs-section-alt">
   <div class="mfs-container">
-    <h2 class="mfs-h2" style="text-align:center;margin-bottom:8px">Apply for Your Maltipoo Today</h2>
-    <p class="mfs-lead" style="text-align:center;margin-bottom:32px">Both genders · $1,300–$1,700 · 10-Year Health Guarantee · Flight Nanny Nationwide</p>
+    <h2 class="mfs-h2" style="text-align:center;margin-bottom:6px">Apply for Your Maltipoo Today</h2>
+    <p class="mfs-lead" style="text-align:center;margin-bottom:28px">Both genders &middot; $1,300&#x2013;$1,700 &middot; 10-Year Health Guarantee &middot; Flight Nanny Nationwide</p>
 
-    <div id="mfs-puppy-inquiry-form" style="padding:0;max-width:800px;margin:0 auto;">
-<style>
-#mfs-puppy-inquiry-form .mfs-fcard{background:#fff;border-radius:20px;box-shadow:0 8px 40px rgba(244,162,97,.18);overflow:hidden;}
-#mfs-puppy-inquiry-form .mfs-fcard-header{background:linear-gradient(135deg,#F4A261,#e07e40);padding:24px 32px;}
-#mfs-puppy-inquiry-form .mfs-fcard-header h3{font-family:'Rosario',serif;color:#fff;font-size:1.5rem;margin:0 0 4px;}
-#mfs-puppy-inquiry-form .mfs-fcard-header p{color:rgba(255,255,255,.88);font-size:.9rem;margin:0;}
-#mfs-puppy-inquiry-form .mfs-fcard-body{padding:28px 32px 32px;}
-#mfs-puppy-inquiry-form .mfs-fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;}
-#mfs-puppy-inquiry-form .mfs-fgrid.single{grid-template-columns:1fr;}
-#mfs-puppy-inquiry-form .mfs-fg{display:flex;flex-direction:column;gap:5px;}
-#mfs-puppy-inquiry-form .mfs-fg label{font-size:.8rem;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.4px;}
-#mfs-puppy-inquiry-form .mfs-fg input,
-#mfs-puppy-inquiry-form .mfs-fg select,
-#mfs-puppy-inquiry-form .mfs-fg textarea{padding:10px 14px;border:1.5px solid #e5ddd6;border-radius:10px;font-family:inherit;font-size:.95rem;color:#333;transition:border-color .2s;background:#fafafa;}
-#mfs-puppy-inquiry-form .mfs-fg input:focus,
-#mfs-puppy-inquiry-form .mfs-fg select:focus,
-#mfs-puppy-inquiry-form .mfs-fg textarea:focus{outline:none;border-color:#F4A261;background:#fff;}
-#mfs-puppy-inquiry-form .mfs-fg textarea{resize:vertical;min-height:72px;}
-#mfs-puppy-inquiry-form .mfs-radio-row{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:4px;}
-#mfs-puppy-inquiry-form .mfs-radio-row label{font-size:.88rem;font-weight:400;text-transform:none;letter-spacing:0;display:flex;align-items:center;gap:5px;cursor:pointer;color:#333;}
-#mfs-puppy-inquiry-form .mfs-section-label{font-size:.78rem;font-weight:700;color:#F4A261;text-transform:uppercase;letter-spacing:.5px;margin:16px 0 6px;border-top:1px solid #f0e8e0;padding-top:14px;}
-#mfs-puppy-inquiry-form .mfs-submit-btn{background:linear-gradient(135deg,#F4A261,#e07e40);color:#fff;border:none;border-radius:50px;padding:14px 40px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:20px;font-family:inherit;letter-spacing:.3px;transition:opacity .2s;box-shadow:0 4px 16px rgba(244,162,97,.4);}
-#mfs-puppy-inquiry-form .mfs-submit-btn:hover{opacity:.9;}
-#mfs-puppy-inquiry-form .mfs-form-ok{display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:12px;padding:20px;text-align:center;color:#2e7d32;font-weight:600;margin-top:20px;font-size:1rem;}
-@media(max-width:580px){
-  #mfs-puppy-inquiry-form .mfs-fgrid{grid-template-columns:1fr;}
-  #mfs-puppy-inquiry-form .mfs-fcard-header,
-  #mfs-puppy-inquiry-form .mfs-fcard-body{padding-left:20px;padding-right:20px;}
-}
-</style>
-<div class="mfs-fcard">
-  <div class="mfs-fcard-header">
-    <h3>🐾 Apply for a Puppy Today</h3>
-    <p>Fill in the details below — we respond within 24 hours. Fields marked * are required.</p>
-  </div>
-  <div class="mfs-fcard-body">
-    <form id="mfs-inquiry-form" action="https://formspree.io/f/xpqoeazq" method="POST">
-      <input type="hidden" name="_subject" value="New Puppy Inquiry — MaltipoosForsale.com">
-      <div class="mfs-fgrid">
-        <div class="mfs-fg"><label>First Name *</label><input type="text" name="first_name" placeholder="Jane" required></div>
-        <div class="mfs-fg"><label>Last Name *</label><input type="text" name="last_name" placeholder="Smith" required></div>
-        <div class="mfs-fg"><label>Email Address *</label><input type="email" name="email" placeholder="your@email.com" required></div>
-        <div class="mfs-fg"><label>Confirm Email *</label><input type="email" name="confirm_email" placeholder="your@email.com" required></div>
-        <div class="mfs-fg"><label>Phone Number *</label><input type="tel" name="phone" placeholder="(555) 000-0000" required></div>
-        <div class="mfs-fg"><label>Your State *</label>
-          <select name="state" required>
-            <option value="">— Select state —</option>
-            <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
-          </select>
+    <div id="mfs-puppy-inquiry-form" style="max-width:800px;margin:0 auto">
+      <div class="mfs-fcard">
+        <div class="mfs-fcard-header">
+          <h3>&#x1F43E; Apply for a Puppy Today</h3>
+          <p>Fill in the details below&#x2014;we respond within 24 hours. Fields marked * are required.</p>
+        </div>
+        <div class="mfs-fcard-body">
+          <form id="mfs-inquiry-form" action="https://formspree.io/f/xpqoeazq" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Puppy Inquiry &#x2014; MaltipoosForsale.com">
+            <div class="mfs-fgrid">
+              <div class="mfs-fg"><label for="mfs-first-name">First Name *</label><input id="mfs-first-name" type="text" name="first_name" placeholder="Jane" required autocomplete="given-name"></div>
+              <div class="mfs-fg"><label for="mfs-last-name">Last Name *</label><input id="mfs-last-name" type="text" name="last_name" placeholder="Smith" required autocomplete="family-name"></div>
+              <div class="mfs-fg"><label for="mfs-email">Email Address *</label><input id="mfs-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
+              <div class="mfs-fg"><label for="mfs-email2">Confirm Email *</label><input id="mfs-email2" type="email" name="confirm_email" placeholder="your@email.com" required autocomplete="email"></div>
+              <div class="mfs-fg"><label for="mfs-phone">Phone Number *</label><input id="mfs-phone" type="tel" name="phone" placeholder="(555) 000-0000" required autocomplete="tel"></div>
+              <div class="mfs-fg">
+                <label for="mfs-state">Your State *</label>
+                <select id="mfs-state" name="state" required autocomplete="address-level1">
+                  <option value="">&#x2014; Select state &#x2014;</option>
+                  <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+                </select>
+              </div>
+            </div>
+
+            <p class="mfs-section-label">&#x1F436; Puppy Preferences</p>
+            <div class="mfs-fgrid">
+              <div class="mfs-fg">
+                <label>Breed Interest *</label>
+                <div class="mfs-radio-row" role="group" aria-label="Breed interest">
+                  <label><input type="radio" name="breed" value="Maltipoo" required> Maltipoo</label>
+                  <label><input type="radio" name="breed" value="Maltese"> Maltese</label>
+                  <label><input type="radio" name="breed" value="Both / Undecided"> Both / Undecided</label>
+                </div>
+              </div>
+              <div class="mfs-fg">
+                <label>Gender Preference</label>
+                <div class="mfs-radio-row" role="group" aria-label="Gender preference">
+                  <label><input type="radio" name="gender_pref" value="Male"> Male</label>
+                  <label><input type="radio" name="gender_pref" value="Female"> Female</label>
+                  <label><input type="radio" name="gender_pref" value="Open to either"> Open to either</label>
+                </div>
+              </div>
+              <div class="mfs-fg">
+                <label>Preferred Size *</label>
+                <div class="mfs-radio-row" role="group" aria-label="Preferred puppy size">
+                  <label><input type="radio" name="size" value="Teacup" required> Teacup</label>
+                  <label><input type="radio" name="size" value="Toy"> Toy</label>
+                  <label><input type="radio" name="size" value="Mini"> Mini</label>
+                  <label><input type="radio" name="size" value="Standard"> Standard</label>
+                </div>
+              </div>
+              <div class="mfs-fg">
+                <label>Ready to Adopt *</label>
+                <div class="mfs-radio-row" role="group" aria-label="Adoption timeline">
+                  <label><input type="radio" name="timeline" value="ASAP" required> ASAP</label>
+                  <label><input type="radio" name="timeline" value="1-3 months"> 1&#x2013;3 months</label>
+                  <label><input type="radio" name="timeline" value="3-6 months"> 3&#x2013;6 months</label>
+                  <label><input type="radio" name="timeline" value="Just browsing"> Just browsing</label>
+                </div>
+              </div>
+              <div class="mfs-fg">
+                <label>Delivery Preference *</label>
+                <div class="mfs-radio-row" role="group" aria-label="Delivery preference">
+                  <label><input type="radio" name="delivery" value="Local pickup" required> Local Pickup</label>
+                  <label><input type="radio" name="delivery" value="Ground transport"> Ground Transport</label>
+                  <label><input type="radio" name="delivery" value="Flight nanny"> Flight Nanny</label>
+                </div>
+              </div>
+              <div class="mfs-fg">
+                <label>Prior Dog Experience? *</label>
+                <div class="mfs-radio-row" role="group" aria-label="Prior dog experience">
+                  <label><input type="radio" name="prior_experience" value="Yes" required> Yes, owned dogs before</label>
+                  <label><input type="radio" name="prior_experience" value="No"> No, first-time owner</label>
+                </div>
+              </div>
+              <div class="mfs-fg"><label for="mfs-puppy-name">Puppy Name Idea</label><input id="mfs-puppy-name" type="text" name="puppy_name" placeholder="e.g. Bella, Max&#x2026;"></div>
+              <div class="mfs-fg"><label for="mfs-hours-alone">Hours Alone Per Day</label><input id="mfs-hours-alone" type="number" name="hours_alone" min="0" max="24" placeholder="e.g. 4"></div>
+            </div>
+
+            <p class="mfs-section-label">&#x1F4AC; Your Message</p>
+            <div class="mfs-fgrid single">
+              <div class="mfs-fg"><label for="mfs-main-reason">Main Reason for Getting a Puppy *</label><textarea id="mfs-main-reason" name="main_reason" placeholder="e.g. Family companion, emotional support, gift&#x2026;" required></textarea></div>
+              <div class="mfs-fg"><label for="mfs-message">Anything Else? Questions or Preferences</label><textarea id="mfs-message" name="message" placeholder="Tell us anything else you&#x2019;d like us to know&#x2026;"></textarea></div>
+            </div>
+            <button type="submit" class="mfs-submit-btn">SUBMIT MY PUPPY APPLICATION &#x2192;</button>
+            <div class="mfs-form-ok" id="mfs-inquiry-ok" role="alert">&#x1F43E; Thank you! We&#x2019;ll be in touch within 24 hours.</div>
+          </form>
         </div>
       </div>
-      <p class="mfs-section-label">🐶 Puppy Preferences</p>
-      <div class="mfs-fgrid">
-        <div class="mfs-fg"><label>Breed Interest *</label>
-          <div class="mfs-radio-row">
-            <label><input type="radio" name="breed" value="Maltipoo" required> Maltipoo</label>
-            <label><input type="radio" name="breed" value="Maltese"> Maltese</label>
-            <label><input type="radio" name="breed" value="Both / Undecided"> Both / Undecided</label>
-          </div>
-        </div>
-        <div class="mfs-fg"><label>Gender Preference</label>
-          <div class="mfs-radio-row">
-            <label><input type="radio" name="gender_pref" value="Male"> Male</label>
-            <label><input type="radio" name="gender_pref" value="Female"> Female</label>
-            <label><input type="radio" name="gender_pref" value="Open to either"> Open to either</label>
-          </div>
-        </div>
-        <div class="mfs-fg"><label>Preferred Size *</label>
-          <div class="mfs-radio-row">
-            <label><input type="radio" name="size" value="Teacup" required> Teacup</label>
-            <label><input type="radio" name="size" value="Toy"> Toy</label>
-            <label><input type="radio" name="size" value="Mini"> Mini</label>
-            <label><input type="radio" name="size" value="Standard"> Standard</label>
-          </div>
-        </div>
-        <div class="mfs-fg"><label>Ready to Adopt *</label>
-          <div class="mfs-radio-row">
-            <label><input type="radio" name="timeline" value="ASAP" required> ASAP</label>
-            <label><input type="radio" name="timeline" value="1-3 months"> 1–3 months</label>
-            <label><input type="radio" name="timeline" value="3-6 months"> 3–6 months</label>
-            <label><input type="radio" name="timeline" value="Just browsing"> Just browsing</label>
-          </div>
-        </div>
-        <div class="mfs-fg"><label>Delivery Preference *</label>
-          <div class="mfs-radio-row">
-            <label><input type="radio" name="delivery" value="Local pickup" required> Local Pickup</label>
-            <label><input type="radio" name="delivery" value="Ground transport"> Ground Transport</label>
-            <label><input type="radio" name="delivery" value="Flight nanny"> Flight Nanny</label>
-          </div>
-        </div>
-        <div class="mfs-fg"><label>Prior Dog Experience? *</label>
-          <div class="mfs-radio-row">
-            <label><input type="radio" name="prior_experience" value="Yes" required> Yes, owned dogs before</label>
-            <label><input type="radio" name="prior_experience" value="No"> No, first-time owner</label>
-          </div>
-        </div>
-        <div class="mfs-fg"><label>Puppy Name Idea</label><input type="text" name="puppy_name" placeholder="e.g. Bella, Max…"></div>
-        <div class="mfs-fg"><label>Hours Alone Per Day</label><input type="number" name="hours_alone" min="0" max="24" placeholder="e.g. 4"></div>
-      </div>
-      <p class="mfs-section-label">💬 Your Message</p>
-      <div class="mfs-fgrid single">
-        <div class="mfs-fg"><label>Main Reason for Getting a Puppy *</label>
-          <textarea name="main_reason" placeholder="e.g. Family companion, emotional support, gift…" required></textarea>
-        </div>
-        <div class="mfs-fg"><label>Anything Else? Questions or Preferences</label>
-          <textarea name="message" placeholder="Tell us anything else you'd like us to know…"></textarea>
-        </div>
-      </div>
-      <button type="submit" class="mfs-submit-btn">SUBMIT MY PUPPY APPLICATION →</button>
-      <div class="mfs-form-ok" id="mfs-inquiry-ok">🐾 Thank you! We'll be in touch within 24 hours.</div>
-    </form>
-  </div>
-</div>
 <script>
 (function(){
   var f=document.getElementById('mfs-inquiry-form');
@@ -1420,23 +1558,23 @@ gtag("config", "GT-W6X7VX9N");
 })();
 </script>
     </div>
-
   </div>
 </div>
 
-<!-- Internal links footer -->
+
+<!-- Internal links -->
 <div class="mfs-section">
   <div class="mfs-container" style="text-align:center">
-    <p style="font-size:.9rem;color:#666;margin-bottom:12px">Explore More MFS Resources</p>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
-      <a href="/maltipoo-breed-guide/" style="color:var(--mfs-primary);font-size:.9rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px">Maltipoo Breed Guide</a>
-      <a href="/maltipoo-training-tips/" style="color:var(--mfs-primary);font-size:.9rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px">Training Tips</a>
-      <a href="/buy-maltipoo-near-me/" style="color:var(--mfs-primary);font-size:.9rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px">Available Puppies</a>
-      <a href="/puppy-health-warranty" style="color:var(--mfs-primary);font-size:.9rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px">Health Warranty</a>
-      <a href="/maltipoo-vs-maltese/" style="color:var(--mfs-primary);font-size:.9rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px">Maltipoo vs Maltese</a>
-      <a href="/is-a-maltipoo-the-right-dog-for-me/" style="color:var(--mfs-primary);font-size:.9rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px">Right Dog for Me?</a>
-      <a href="/faq/" style="color:var(--mfs-primary);font-size:.9rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px">FAQ</a>
-      <a href="/contact-2/" style="color:var(--mfs-primary);font-size:.9rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px">Contact Us</a>
+    <p style="font-size:.88rem;color:#666;margin-bottom:12px;font-family:'Open Sans',sans-serif">Explore More MFS Resources</p>
+    <div style="display:flex;flex-wrap:wrap;gap:9px;justify-content:center">
+      <a href="/maltipoo-breed-guide/" style="color:var(--mfs-orange-text);font-size:.88rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px;font-family:'Open Sans',sans-serif">Maltipoo Breed Guide</a>
+      <a href="/maltipoo-training-tips/" style="color:var(--mfs-orange-text);font-size:.88rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px;font-family:'Open Sans',sans-serif">Training Tips</a>
+      <a href="/buy-maltipoo-near-me/" style="color:var(--mfs-orange-text);font-size:.88rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px;font-family:'Open Sans',sans-serif">Available Puppies</a>
+      <a href="/puppy-health-warranty" style="color:var(--mfs-orange-text);font-size:.88rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px;font-family:'Open Sans',sans-serif">Health Warranty</a>
+      <a href="/maltipoo-vs-maltese/" style="color:var(--mfs-orange-text);font-size:.88rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px;font-family:'Open Sans',sans-serif">Maltipoo vs Maltese</a>
+      <a href="/is-a-maltipoo-the-right-dog-for-me/" style="color:var(--mfs-orange-text);font-size:.88rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px;font-family:'Open Sans',sans-serif">Right Dog for Me?</a>
+      <a href="/faq/" style="color:var(--mfs-orange-text);font-size:.88rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px;font-family:'Open Sans',sans-serif">FAQ</a>
+      <a href="/contact-2/" style="color:var(--mfs-orange-text);font-size:.88rem;text-decoration:none;border:1px solid var(--mfs-border);padding:6px 14px;border-radius:20px;font-family:'Open Sans',sans-serif">Contact Us</a>
     </div>
   </div>
 </div>
