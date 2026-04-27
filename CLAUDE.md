@@ -74,18 +74,19 @@ urllib.request.urlopen(req)
 
 | Agent | Skill File | Trigger |
 |---|---|---|
-| Technical Health | `MFS-WEBSITE-HEALTH-SKILL.md` | Broken images, canonicals, redirects |
-| Indexing | `MFS-INDEXING-SKILL.md` | After any deploy, sitemap fixes, GSC submission |
-| Broken Links | `MFS-BROKEN-LINKS-SKILL.md` | GSC 404 errors, broken internal links, missing hub pages |
-| Contact Form | `MFS-CONTACT-FORM-SKILL.md` | Form audit/fix, Formspree ID, newsletter, batch apply to all pages |
-| YouTube | `MFS-YOUTUBE-SKILL.md` | Fix broken iframes, video-sitemap.xml errors, add new videos |
-| Google Map | `MFS-GOOGLE-MAP-SKILL.md` | Fix broken embed maps, add maps to location pages |
-| Location Pages | `LOCATION-PAGE-BUILDER-SKILL.md` | Creating state/city pages |
-| Design Rebuild | `MFS-DESIGN-REBUILD-SKILL.md` | Redesigning pages with new design system |
-| Footer Agent | `MFS-FOOTER-AGENT-SKILL.md` | Apply/update standard footer on all pages (run `rebuild_footer.py`) |
-| SEO Content | `MFS.md` | All content creation, keyword strategy |
+| **Grill Me** | `skills/grill-me.md` | **Start of every session — run before any build work** |
+| Technical Health | `skills/mfs-website-health.md` | Broken images, canonicals, redirects |
+| Indexing | `skills/mfs-indexing.md` | After any deploy, sitemap fixes, GSC submission |
+| Broken Links | `skills/mfs-broken-links.md` | GSC 404 errors, broken internal links, missing hub pages |
+| Contact Form | `skills/mfs-contact-form.md` | Form audit/fix, Formspree ID, newsletter, batch apply to all pages |
+| YouTube | `skills/mfs-youtube.md` | Fix broken iframes, video-sitemap.xml errors, add new videos |
+| Google Map | `skills/mfs-google-map.md` | Fix broken embed maps, add maps to location pages |
+| Location Pages | `skills/location-page-builder.md` | Creating state/city pages |
+| Design Rebuild | `skills/mfs-design-rebuild.md` | Redesigning pages with new design system |
+| Footer Agent | `skills/mfs-footer-agent.md` | Apply/update standard footer on all pages (run `scripts/rebuild_footer.py`) |
+| SEO Content | `docs/research/mfs-content-strategy.md` | All content creation, keyword strategy |
 
-All skill files are in `/Users/apple/Downloads/MFS/`
+All skill files are in `/Users/apple/Downloads/MFS/skills/`
 
 ## Impeccable Design Skills
 Installed at `.claude/skills/` — run at start of any design session:
